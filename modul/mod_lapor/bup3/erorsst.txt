@@ -1,0 +1,3032 @@
+SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       pekerjaan               Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                Mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                WHERE  a.status = '20'
+                       AND LEFT(a.createdt, 10) BETWEEN '2020-11-01' AND '2020-11-25'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       a.jkel                  JenisKelamin,
+                       o.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   TglMulai,
+                       Concat('`', a.noktp)    'No KTP',
+                       akhir                   Tglakhir,
+                       masa                    'Masa(bulan)',
+                       a.tunggakan             Graceperiod,
+                       a.up                    Plafond,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                'Status',
+                       p.nama                  'Nama AO',
+                       p.username              'Username AO',
+                       a.createdt              'Tgl Input',
+                       e.paiddt                'Tgl Bayar Premi',
+                       e.paidamt               'Jml Bayar Premi',
+                       Concat('`', h.regclaim) 'No Claim',
+                       h.tglkejadian           'Tgl Kejadian',
+                       h.tgllapor              'Tgl Lapor Claim',
+                       h.nilaios               'Nilai OS',
+                       DATE_ADD(h.tglkejadian,INTERVAL (wkc.msdesc + wkc.createby) DAY) 'Tgl Jatuh Tempo',
+                       a.validdt               'Tgl Validasi',
+                       h.validdt               'Tgl Valid Claim',
+                       k.createdt              'Tgl Reject Claim',
+                       n.msdesc                'Alasan Reject',
+                       h.comment               Keterangan,
+                       j.createdt              'Tgl Terima Dokumen',
+                       d.paiddt                'Tgl Bayar Claim',
+                       d.paidamt               'Jml Bayar Claim',
+                       IF (dok.hasil IS NULL,
+                            'Lengkap',
+                            'Belum Lengkap')   'Status Dokumen',
+                       kurang.kelengkapan	     Kekurangan
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid AND c.mstype = 'streq'
+                       LEFT JOIN tr_sppa_paid d
+                              ON d.regid = a.regid AND d.paidtype = 'CLAIM'
+                       LEFT JOIN tr_sppa_paid e
+                              ON e.regid = a.regid AND e.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid AND g.mstype = 'asuransi'
+                       INNER JOIN tr_claim h
+                               ON a.regid = h.regid
+                       LEFT JOIN ms_master i
+                              ON i.msid = Concat(a.asuransi, a.produk) AND i.mstype = 'wktclm'
+                       LEFT JOIN tr_sppa_log j
+                              ON j.regid = a.regid AND j.status = '96'
+                       LEFT JOIN tr_sppa_log k
+                              ON k.regid = a.regid AND k.status = '94'
+                       LEFT JOIN  (SELECT mstype,COUNT(msid) 'jmldokumen' FROM ms_master GROUP BY mstype) l
+                              ON l.mstype = h.doctype
+                       LEFT JOIN  (SELECT regid,COUNT(regid) 'uploaded' FROM tr_document WHERE catdoc='clm' GROUP BY regid) m
+                              ON m.regid = a.regid 
+                       LEFT JOIN  (SELECT msid, msdesc FROM ms_master WHERE mstype = 'REJECTTYPE') n
+                              ON n.msid  = h.detail
+                       INNER JOIN  (SELECT msid, msdesc FROM ms_master WHERE mstype = 'KERJA') o
+                              ON o.msid  = a.pekerjaan
+                       LEFT JOIN ms_admin p
+                              ON a.createby = p.username
+                       LEFT JOIN  (SELECT msid, msdesc, createby FROM ms_master WHERE mstype='WKTCLM') wkc
+                              ON wkc.msid = concat(a.asuransi,a.produk)
+                       LEFT JOIN  (SELECT a.regid,
+                                          GROUP_CONCAT(DISTINCT IF (b.editby = 'wajib' AND c.jnsdoc IS NULL,
+                                          'Dokumen Belum Lengkap',
+                                          null) SEPARATOR ', ')hasil
+                                   FROM   tr_claim a
+                                          INNER JOIN ms_master b
+                                                  ON b.mstype = a.doctype
+                                                     AND b.editby = 'wajib'
+                                          LEFT JOIN tr_document c
+                                                  ON c.regid = a.regid
+                                                     AND c.jnsdoc = b.msid
+                                   WHERE  b.createby IS NULL
+                                          AND c.jnsdoc IS NULL
+                                   GROUP BY regid) dok
+                              ON dok.regid = a.regid
+                        LEFT JOIN (SELECT a.regid,GROUP_CONCAT(trim(msdesc) SEPARATOR ', ') kelengkapan
+                                   FROM tr_claim a
+                                   INNER JOIN ms_master b 
+                                        	ON a.doctype = b.mstype  
+                                   LEFT JOIN tr_document c
+                                        	ON c.regid = a.regid
+                                           	AND c.jnsdoc = b.msid
+                                   WHERE b.editby = 'wajib' and c.jnsdoc is null
+                                   GROUP BY a.regid) kurang
+                              ON kurang.regid = a.regid
+                        WHERE  a.status IN ( '90', '91', '92', '93', '94', '95', '96' )
+                              AND LEFT(h.tgllapor, 10) BETWEEN '2019-07-01' AND '2020-11-24'  SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       h.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar Premi',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat'
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       LEFT JOIN tr_sppa_paid d
+                              ON d.regid = a.regid
+                                 AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       LEFT JOIN ms_master g
+                              ON a.asuransi = g.msid
+                                 AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.pekerjaan = h.msid
+                                 AND h.mstype = 'KERJA'
+                WHERE  LEFT(a.createdt, 10) BETWEEN '2019-01-01' AND '2020-11-26' and  a.cabang = '58'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       pekerjaan               Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                Mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                WHERE  a.status = '20'
+                       AND LEFT(a.createdt, 10) BETWEEN '2020-01-01' AND '2020-10-30' and  a.asuransi =  'ETI'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-01-01' AND '2020-10-30' and  a.asuransi =  'ETI'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-01-01' AND '2020-10-30' and  a.asuransi =  'ETI'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-01' AND '2020-11-25'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-01' AND '2020-11-25'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-01' AND '2020-11-25'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       h.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar Premi',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat'
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       LEFT JOIN tr_sppa_paid d
+                              ON d.regid = a.regid
+                                 AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       LEFT JOIN ms_master g
+                              ON a.asuransi = g.msid
+                                 AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.pekerjaan = h.msid
+                                 AND h.mstype = 'KERJA'
+                WHERE  LEFT(a.createdt, 10) BETWEEN '2020-11-01' AND '2020-11-30' and  a.asuransi =  'ETI'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-01' AND '2020-11-25'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       pekerjaan               Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                Mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                WHERE  a.status = '20'
+                       AND LEFT(a.createdt, 10) BETWEEN '2020-11-01' AND '2020-11-30' and  a.asuransi =  'ETI'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       pekerjaan               Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                Mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                WHERE  a.status = '20'
+                       AND LEFT(a.createdt, 10) BETWEEN '2020-11-01' AND '2020-11-30' and  a.asuransi =  'MPM'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       pekerjaan               Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                Mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                WHERE  a.status = '20'
+                       AND LEFT(a.createdt, 10) BETWEEN '2020-11-01' AND '2020-11-30' and  a.asuransi =  'TKP'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       pekerjaan               Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                Mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                WHERE  a.status = '20'
+                       AND LEFT(a.createdt, 10) BETWEEN '2019-01-01' AND '2020-11-26' and  a.cabang = '58' and  a.asuransi =  'ETI'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       pekerjaan               Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                Mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                WHERE  a.status = '20'
+                       AND LEFT(a.createdt, 10) BETWEEN '2019-01-01' AND '2020-11-26' and  a.cabang = '58' and  a.asuransi =  'MPM'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       pekerjaan               Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                Mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                WHERE  a.status = '20'
+                       AND LEFT(a.createdt, 10) BETWEEN '2019-01-01' AND '2020-11-26' and  a.cabang = '58' and  a.asuransi =  'ETI'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       h.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar Premi',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat'
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       LEFT JOIN tr_sppa_paid d
+                              ON d.regid = a.regid
+                                 AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       LEFT JOIN ms_master g
+                              ON a.asuransi = g.msid
+                                 AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.pekerjaan = h.msid
+                                 AND h.mstype = 'KERJA'
+                WHERE  LEFT(a.createdt, 10) BETWEEN '2020-01-01' AND '2020-11-26'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       h.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar Premi',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat'
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       LEFT JOIN tr_sppa_paid d
+                              ON d.regid = a.regid
+                                 AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       LEFT JOIN ms_master g
+                              ON a.asuransi = g.msid
+                                 AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.pekerjaan = h.msid
+                                 AND h.mstype = 'KERJA'
+                WHERE  LEFT(a.createdt, 10) BETWEEN '2007-01-01' AND '2019-01-01' and  a.cabang = '14'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       h.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar Premi',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat'
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       LEFT JOIN tr_sppa_paid d
+                              ON d.regid = a.regid
+                                 AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       LEFT JOIN ms_master g
+                              ON a.asuransi = g.msid
+                                 AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.pekerjaan = h.msid
+                                 AND h.mstype = 'KERJA'
+                WHERE  LEFT(a.createdt, 10) BETWEEN '2019-01-01' AND '2020-11-26' and  a.cabang = '14'SELECT f.msdesc                                  Produk,
+                       Concat('`', a.regid)                      'No Register',
+                       a.nopeserta                               'No Pinjaman',
+                       a.nama                                    Nama,
+                       Concat('`', a.noktp)                      'No KTP',
+                       jkel                                      Jkel,
+                       If(h.msdesc IS NULL, pekerjaan, h.msdesc) Pekerjaan,
+                       b.msdesc                                  Cabang,
+                       tgllahir                                  'Tgl Lahir',
+                       mulai                                     Mulai,
+                       a.akhir                                   Akhir,
+                       a.masa,
+                       a.tunggakan                               Graceperiod,
+                       up                                        UP,
+                       tpremi                                    Premi,
+                       g.msdesc                                  Asuransi,
+                       c.msdesc                                  Status,
+                       i.nama                                    'Nama AO',
+                       i.username                                'Username AO',
+                       a.createdt                                'Tgl Input',
+                       Concat('`', a.policyno)                   'No Sertifikat',
+                       a.validdt                                 'Tgl Validasi'
+                FROM   tr_sppa a
+                       LEFT JOIN ms_master b
+                              ON a.cabang = b.msid
+                                 AND b.mstype = 'cab'
+                       LEFT JOIN ms_master f
+                              ON a.produk = f.msid
+                                 AND f.mstype = 'produk'
+                       LEFT JOIN ms_master c
+                              ON a.status = c.msid
+                                 AND c.mstype = 'streq'
+                       LEFT JOIN ms_master g
+                              ON a.asuransi = g.msid
+                                 AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.pekerjaan = h.msid
+                                 AND h.mstype = 'KERJA'
+                       LEFT JOIN ms_admin i
+                              ON a.createby = i.username
+                WHERE  a.status IN ( '5' )
+                       AND LEFT(a.validdt, 10) BETWEEN '2019-07-01' AND '2020-11-26'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       a.jkel                  JenisKelamin,
+                       o.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   TglMulai,
+                       Concat('`', a.noktp)    'No KTP',
+                       akhir                   Tglakhir,
+                       masa                    'Masa(bulan)',
+                       a.tunggakan             Graceperiod,
+                       a.up                    Plafond,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                'Status',
+                       p.nama                  'Nama AO',
+                       p.username              'Username AO',
+                       a.createdt              'Tgl Input',
+                       e.paiddt                'Tgl Bayar Premi',
+                       e.paidamt               'Jml Bayar Premi',
+                       Concat('`', h.regclaim) 'No Claim',
+                       h.tglkejadian           'Tgl Kejadian',
+                       h.tgllapor              'Tgl Lapor Claim',
+                       h.nilaios               'Nilai OS',
+                       DATE_ADD(h.tglkejadian,INTERVAL (wkc.msdesc + wkc.createby) DAY) 'Tgl Jatuh Tempo',
+                       a.validdt               'Tgl Validasi',
+                       h.validdt               'Tgl Valid Claim',
+                       k.createdt              'Tgl Reject Claim',
+                       n.msdesc                'Alasan Reject',
+                       h.comment               Keterangan,
+                       j.createdt              'Tgl Terima Dokumen',
+                       d.paiddt                'Tgl Bayar Claim',
+                       d.paidamt               'Jml Bayar Claim',
+                       IF (dok.hasil IS NULL,
+                            'Lengkap',
+                            'Belum Lengkap')   'Status Dokumen',
+                       kurang.kelengkapan	     Kekurangan
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid AND c.mstype = 'streq'
+                       LEFT JOIN tr_sppa_paid d
+                              ON d.regid = a.regid AND d.paidtype = 'CLAIM'
+                       LEFT JOIN tr_sppa_paid e
+                              ON e.regid = a.regid AND e.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid AND g.mstype = 'asuransi'
+                       INNER JOIN tr_claim h
+                               ON a.regid = h.regid
+                       LEFT JOIN ms_master i
+                              ON i.msid = Concat(a.asuransi, a.produk) AND i.mstype = 'wktclm'
+                       LEFT JOIN tr_sppa_log j
+                              ON j.regid = a.regid AND j.status = '96'
+                       LEFT JOIN tr_sppa_log k
+                              ON k.regid = a.regid AND k.status = '94'
+                       LEFT JOIN  (SELECT mstype,COUNT(msid) 'jmldokumen' FROM ms_master GROUP BY mstype) l
+                              ON l.mstype = h.doctype
+                       LEFT JOIN  (SELECT regid,COUNT(regid) 'uploaded' FROM tr_document WHERE catdoc='clm' GROUP BY regid) m
+                              ON m.regid = a.regid 
+                       LEFT JOIN  (SELECT msid, msdesc FROM ms_master WHERE mstype = 'REJECTTYPE') n
+                              ON n.msid  = h.detail
+                       INNER JOIN  (SELECT msid, msdesc FROM ms_master WHERE mstype = 'KERJA') o
+                              ON o.msid  = a.pekerjaan
+                       LEFT JOIN ms_admin p
+                              ON a.createby = p.username
+                       LEFT JOIN  (SELECT msid, msdesc, createby FROM ms_master WHERE mstype='WKTCLM') wkc
+                              ON wkc.msid = concat(a.asuransi,a.produk)
+                       LEFT JOIN  (SELECT a.regid,
+                                          GROUP_CONCAT(DISTINCT IF (b.editby = 'wajib' AND c.jnsdoc IS NULL,
+                                          'Dokumen Belum Lengkap',
+                                          null) SEPARATOR ', ')hasil
+                                   FROM   tr_claim a
+                                          INNER JOIN ms_master b
+                                                  ON b.mstype = a.doctype
+                                                     AND b.editby = 'wajib'
+                                          LEFT JOIN tr_document c
+                                                  ON c.regid = a.regid
+                                                     AND c.jnsdoc = b.msid
+                                   WHERE  b.createby IS NULL
+                                          AND c.jnsdoc IS NULL
+                                   GROUP BY regid) dok
+                              ON dok.regid = a.regid
+                        LEFT JOIN (SELECT a.regid,GROUP_CONCAT(trim(msdesc) SEPARATOR ', ') kelengkapan
+                                   FROM tr_claim a
+                                   INNER JOIN ms_master b 
+                                        	ON a.doctype = b.mstype  
+                                   LEFT JOIN tr_document c
+                                        	ON c.regid = a.regid
+                                           	AND c.jnsdoc = b.msid
+                                   WHERE b.editby = 'wajib' and c.jnsdoc is null
+                                   GROUP BY a.regid) kurang
+                              ON kurang.regid = a.regid
+                        WHERE  a.status IN ( '90', '91', '92', '93', '94', '95', '96' )
+                              AND LEFT(h.tgllapor, 10) BETWEEN '2019-07-01' AND '2020-11-25'   AND  a.asuransi =  'TKP'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-24' AND '2020-11-25'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-24' AND '2020-11-25'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-24' AND '2020-11-25'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       pekerjaan               Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                Mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                WHERE  a.status = '20'
+                       AND LEFT(a.createdt, 10) BETWEEN '2020-11-24' AND '2020-11-25'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-24' AND '2020-11-25'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       h.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar Premi',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat'
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       LEFT JOIN tr_sppa_paid d
+                              ON d.regid = a.regid
+                                 AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       LEFT JOIN ms_master g
+                              ON a.asuransi = g.msid
+                                 AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.pekerjaan = h.msid
+                                 AND h.mstype = 'KERJA'
+                WHERE  LEFT(a.createdt, 10) BETWEEN '2020-11-24' AND '2020-11-25'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-23' AND '2020-11-25'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-24' AND '2020-11-25'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       pekerjaan               Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                Mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                WHERE  a.status = '20'
+                       AND LEFT(a.createdt, 10) BETWEEN '2020-11-24' AND '2020-11-25'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       pekerjaan               Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                Mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                WHERE  a.status = '20'
+                       AND LEFT(a.createdt, 10) BETWEEN '2020-11-23' AND '2020-11-25'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       pekerjaan               Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                Mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                WHERE  a.status = '20'
+                       AND LEFT(a.createdt, 10) BETWEEN '2020-11-23' AND '2020-11-26'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       pekerjaan               Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                Mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                WHERE  a.status = '20'
+                       AND LEFT(a.createdt, 10) BETWEEN '2020-11-20' AND '2020-11-26'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-24' AND '2020-11-26'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-24' AND '2020-11-25'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-01' AND '2020-11-26'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-01' AND '2020-11-26'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-01' AND '2020-11-26'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-01' AND '2020-11-27'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-01' AND '2020-11-27'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-01' AND '2020-11-27'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-01' AND '2020-11-27'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-01' AND '2020-11-27'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-01' AND '2020-11-27'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-01' AND '2020-11-27' and  a.asuransi =  'TKP'SELECT f.msdesc                                  Produk,
+                       Concat('`', a.regid)                      'No Register',
+                       a.nopeserta                               'No Pinjaman',
+                       a.nama                                    Nama,
+                       Concat('`', a.noktp)                      'No KTP',
+                       jkel                                      Jkel,
+                       If(h.msdesc IS NULL, pekerjaan, h.msdesc) Pekerjaan,
+                       b.msdesc                                  Cabang,
+                       tgllahir                                  'Tgl Lahir',
+                       mulai                                     Mulai,
+                       akhir                                     Akhir,
+                       masa                                      Masa,
+                       a.tunggakan                               Graceperiod,
+                       up                                        UP,
+                       tpremi                                    Premi,
+                       g.msdesc                                  Asuransi,
+                       c.msdesc                                  Status,
+                       i.nama                                    'Nama AO',
+                       i.username                                'Username AO',
+                       a.createdt                                'Tgl Input'
+                FROM   tr_sppa a
+                       LEFT JOIN ms_master b
+                              ON a.cabang = b.msid
+                                 AND b.mstype = 'cab'
+                       LEFT JOIN ms_master c
+                              ON a.status = c.msid
+                                 AND c.mstype = 'streq'
+                       LEFT JOIN ms_master f
+                              ON a.produk = f.msid
+                                 AND f.mstype = 'produk'
+                       LEFT JOIN ms_master g
+                              ON a.asuransi = g.msid
+                                 AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.pekerjaan = h.msid
+                                 AND h.mstype = 'KERJA'
+                       LEFT JOIN ms_admin i
+                              ON a.createby = i.username
+                WHERE  a.status IN ( '11' )
+                       AND LEFT(a.createdt, 10) BETWEEN '2020-01-01' AND '2020-01-31'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-01' AND '2020-11-27'SELECT f.msdesc                                  Produk,
+                       Concat('`', a.regid)                      'No Register',
+                       a.nopeserta                               'No Pinjaman',
+                       a.nama                                    Nama,
+                       Concat('`', a.noktp)                      'No KTP',
+                       jkel                                      Jkel,
+                       If(h.msdesc IS NULL, pekerjaan, h.msdesc) Pekerjaan,
+                       b.msdesc                                  Cabang,
+                       tgllahir                                  'Tgl Lahir',
+                       mulai                                     Mulai,
+                       akhir                                     Akhir,
+                       masa                                      Masa,
+                       a.tunggakan                               Graceperiod,
+                       up                                        UP,
+                       tpremi                                    Premi,
+                       g.msdesc                                  Asuransi,
+                       c.msdesc                                  Status,
+                       i.nama                                    'Nama AO',
+                       i.username                                'Username AO',
+                       a.createdt                                'Tgl Input'
+                FROM   tr_sppa a
+                       LEFT JOIN ms_master b
+                              ON a.cabang = b.msid
+                                 AND b.mstype = 'cab'
+                       LEFT JOIN ms_master c
+                              ON a.status = c.msid
+                                 AND c.mstype = 'streq'
+                       LEFT JOIN ms_master f
+                              ON a.produk = f.msid
+                                 AND f.mstype = 'produk'
+                       LEFT JOIN ms_master g
+                              ON a.asuransi = g.msid
+                                 AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.pekerjaan = h.msid
+                                 AND h.mstype = 'KERJA'
+                       LEFT JOIN ms_admin i
+                              ON a.createby = i.username
+                WHERE  a.status IN ( '0', '1' )
+                       AND LEFT(a.createdt, 10) BETWEEN '2020-11-01' AND '2020-11-27'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2019-07-01' AND '2020-11-27' and  a.asuransi =  'TKP'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2019-07-01' AND '2020-11-27'SELECT f.msdesc                                  Produk,
+                       Concat('`', a.regid)                      'No Register',
+                       a.nopeserta                               'No Pinjaman',
+                       a.nama                                    Nama,
+                       Concat('`', a.noktp)                      'No KTP',
+                       jkel                                      Jkel,
+                       If(h.msdesc IS NULL, pekerjaan, h.msdesc) Pekerjaan,
+                       b.msdesc                                  Cabang,
+                       tgllahir                                  'Tgl Lahir',
+                       mulai                                     Mulai,
+                       akhir                                     Akhir,
+                       masa                                      Masa,
+                       a.tunggakan                               Graceperiod,
+                       up                                        UP,
+                       tpremi                                    Premi,
+                       g.msdesc                                  Asuransi,
+                       c.msdesc                                  Status,
+                       i.nama                                    'Nama AO',
+                       i.username                                'Username AO',
+                       a.createdt                                'Tgl Input'
+                FROM   tr_sppa a
+                       LEFT JOIN ms_master b
+                              ON a.cabang = b.msid
+                                 AND b.mstype = 'cab'
+                       LEFT JOIN ms_master c
+                              ON a.status = c.msid
+                                 AND c.mstype = 'streq'
+                       LEFT JOIN ms_master f
+                              ON a.produk = f.msid
+                                 AND f.mstype = 'produk'
+                       LEFT JOIN ms_master g
+                              ON a.asuransi = g.msid
+                                 AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.pekerjaan = h.msid
+                                 AND h.mstype = 'KERJA'
+                       LEFT JOIN ms_admin i
+                              ON a.createby = i.username
+                WHERE  a.status IN ( '0', '1' )
+                       AND LEFT(a.createdt, 10) BETWEEN '2019-07-01' AND '2020-11-27'SELECT f.msdesc                                  Produk,
+                       Concat('`', a.regid)                      'No Register',
+                       a.nopeserta                               'No Pinjaman',
+                       a.nama                                    Nama,
+                       Concat('`', a.noktp)                      'No KTP',
+                       jkel                                      Jkel,
+                       If(h.msdesc IS NULL, pekerjaan, h.msdesc) Pekerjaan,
+                       b.msdesc                                  Cabang,
+                       tgllahir                                  'Tgl Lahir',
+                       mulai                                     Mulai,
+                       akhir                                     Akhir,
+                       masa                                      Masa,
+                       a.tunggakan                               Graceperiod,
+                       up                                        UP,
+                       tpremi                                    Premi,
+                       g.msdesc                                  Asuransi,
+                       c.msdesc                                  Status,
+                       i.nama                                    'Nama AO',
+                       i.username                                'Username AO',
+                       a.createdt                                'Tgl Input'
+                FROM   tr_sppa a
+                       LEFT JOIN ms_master b
+                              ON a.cabang = b.msid
+                                 AND b.mstype = 'cab'
+                       LEFT JOIN ms_master c
+                              ON a.status = c.msid
+                                 AND c.mstype = 'streq'
+                       LEFT JOIN ms_master f
+                              ON a.produk = f.msid
+                                 AND f.mstype = 'produk'
+                       LEFT JOIN ms_master g
+                              ON a.asuransi = g.msid
+                                 AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.pekerjaan = h.msid
+                                 AND h.mstype = 'KERJA'
+                       LEFT JOIN ms_admin i
+                              ON a.createby = i.username
+                WHERE  a.status IN ( '11' )
+                       AND LEFT(a.createdt, 10) BETWEEN '2019-07-01' AND '2020-11-27'SELECT f.msdesc                                  Produk,
+                       Concat('`', a.regid)                      'No Register',
+                       a.nopeserta                               'No Pinjaman',
+                       a.nama                                    Nama,
+                       Concat('`', a.noktp)                      'No KTP',
+                       jkel                                      Jkel,
+                       If(h.msdesc IS NULL, pekerjaan, h.msdesc) Pekerjaan,
+                       b.msdesc                                  Cabang,
+                       tgllahir                                  'Tgl Lahir',
+                       mulai                                     Mulai,
+                       akhir                                     Akhir,
+                       masa                                      Masa,
+                       a.tunggakan                               Graceperiod,
+                       up                                        UP,
+                       tpremi                                    Premi,
+                       g.msdesc                                  Asuransi,
+                       c.msdesc                                  Status,
+                       i.nama                                    'Nama AO',
+                       i.username                                'Username AO',
+                       a.createdt                                'Tgl Input'
+                FROM   tr_sppa a
+                       LEFT JOIN ms_master b
+                              ON a.cabang = b.msid
+                                 AND b.mstype = 'cab'
+                       LEFT JOIN ms_master c
+                              ON a.status = c.msid
+                                 AND c.mstype = 'streq'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       LEFT JOIN ms_master g
+                              ON a.asuransi = g.msid
+                                 AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.pekerjaan = h.msid
+                                 AND h.mstype = 'KERJA'
+                       LEFT JOIN ms_admin i
+                              ON a.createby = i.username
+                WHERE  a.status IN ( '3' )
+                       AND LEFT(a.mulai, 10) BETWEEN '2019-07-01' AND '2020-11-27'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-23' AND '2020-11-26'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       pekerjaan               Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                Mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                WHERE  a.status = '20'
+                       AND LEFT(a.createdt, 10) BETWEEN '2020-11-23' AND '2020-11-26'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-23' AND '2020-11-26'SELECT f.msdesc                                  Produk,
+                       Concat('`', a.regid)                      'No Register',
+                       a.nopeserta                               'No Pinjaman',
+                       a.nama                                    Nama,
+                       Concat('`', a.noktp)                      'No KTP',
+                       jkel                                      Jkel,
+                       If(h.msdesc IS NULL, pekerjaan, h.msdesc) Pekerjaan,
+                       b.msdesc                                  Cabang,
+                       tgllahir                                  'Tgl Lahir',
+                       mulai                                     Mulai,
+                       a.akhir                                   Akhir,
+                       a.masa,
+                       a.tunggakan                               Graceperiod,
+                       up                                        UP,
+                       tpremi                                    Premi,
+                       g.msdesc                                  Asuransi,
+                       c.msdesc                                  Status,
+                       i.nama                                    'Nama AO',
+                       i.username                                'Username AO',
+                       a.createdt                                'Tgl Input',
+                       Concat('`', a.policyno)                   'No Sertifikat',
+                       a.validdt                                 'Tgl Validasi'
+                FROM   tr_sppa a
+                       LEFT JOIN ms_master b
+                              ON a.cabang = b.msid
+                                 AND b.mstype = 'cab'
+                       LEFT JOIN ms_master f
+                              ON a.produk = f.msid
+                                 AND f.mstype = 'produk'
+                       LEFT JOIN ms_master c
+                              ON a.status = c.msid
+                                 AND c.mstype = 'streq'
+                       LEFT JOIN ms_master g
+                              ON a.asuransi = g.msid
+                                 AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.pekerjaan = h.msid
+                                 AND h.mstype = 'KERJA'
+                       LEFT JOIN ms_admin i
+                              ON a.createby = i.username
+                WHERE  a.status IN ( '5' )
+                       AND LEFT(a.validdt, 10) BETWEEN '2019-07-01' AND '2020-11-27'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       pekerjaan               Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                Mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                WHERE  a.status = '20'
+                       AND LEFT(a.createdt, 10) BETWEEN '2020-11-01' AND '2020-11-27'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-01' AND '2020-11-27'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       pekerjaan               Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                Mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                WHERE  a.status = '20'
+                       AND LEFT(a.createdt, 10) BETWEEN '2020-10-01' AND '2020-11-27'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       pekerjaan               Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                Mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                WHERE  a.status = '20'
+                       AND LEFT(a.createdt, 10) BETWEEN '2020-09-01' AND '2020-11-27'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       pekerjaan               Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                Mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                WHERE  a.status = '20'
+                       AND LEFT(a.createdt, 10) BETWEEN '2020-08-01' AND '2020-11-27'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-08-01' AND '2020-11-27'SELECT f.msdesc                Produk,
+                       Concat('`', a.regid)    'No Register',
+                       a.nopeserta             'No Pinjaman',
+                       a.nama                  Nama,
+                       Concat('`', a.noktp)    'No KTP',
+                       jkel                    Jkel,
+                       d.msdesc                Pekerjaan,
+                       b.msdesc                Cabang,
+                       tgllahir                'Tgl Lahir',
+                       mulai                   Mulai,
+                       akhir                   Akhir,
+                       masa                    Masa,
+                       a.tunggakan             Graceperiod,
+                       up                      UP,
+                       tpremi                  Premi,
+                       g.msdesc                Asuransi,
+                       c.msdesc                Status,
+                       e.nama                  'Nama AO',
+                       e.username              'Username AO',
+                       d.paiddt                'Tgl Bayar',
+                       d.paidamt               'Jml Bayar Premi',
+                       a.createdt              'Tgl Input',
+                       Concat('`', a.policyno) 'No Sertifikat',
+                       h.msdesc                mitra
+                FROM   tr_sppa a
+                       INNER JOIN ms_master b
+                               ON a.cabang = b.msid
+                                  AND b.mstype = 'cab'
+                       INNER JOIN ms_master c
+                               ON a.status = c.msid
+                                  AND c.mstype = 'streq'
+                       INNER JOIN tr_sppa_paid d
+                               ON d.regid = a.regid
+                                  AND d.paidtype = 'PREMI'
+                       LEFT JOIN ms_admin e
+                              ON a.createby = e.username
+                       INNER JOIN ms_master f
+                               ON a.produk = f.msid
+                                  AND f.mstype = 'produk'
+                       INNER JOIN ms_master g
+                               ON a.asuransi = g.msid
+                                  AND g.mstype = 'asuransi'
+                       LEFT JOIN ms_master h
+                              ON a.mitra = h.msid
+                                 AND h.mstype = 'mitra'
+                       LEFT JOIN ms_master i
+                              ON a.pekerjaan = i.msid
+                                 AND i.mstype = 'KERJA'
+                WHERE  LEFT(d.paiddt, 10) BETWEEN '2020-11-01' AND '2020-11-27'

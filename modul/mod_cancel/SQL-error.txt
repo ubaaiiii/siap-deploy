@@ -1,0 +1,2 @@
+2021-01-19 09:35:16 ---- 211907002068
+	INSERT INTO tr_sppa_cancel (regid, tglbatal, refund, masa, sisa, createby, createdt, statcan, catreason, reason) SELECT a.regid, '2021-01-19', IF (b.regid IS NULL, 0, IF (Datediff('2021-01-19', b.paiddt) < 30, a.premi, (Floor(Datediff(akhir, '2021-01-19') / 30.4) / masa ) * (tpremi * 50 / 100 ))), masa, Floor(Datediff(akhir, '2021-01-19') / 30.4), 'BROSTB3105', '2021-01-19 09:35:16', '1', 'RT', '' FROM tr_sppa a LEFT JOIN tr_sppa_paid b ON a.regid = b.regid AND b.paidtype = 'PREMI' WHERE a.regid = '211907002068' AND b.regid IS NOT NULL

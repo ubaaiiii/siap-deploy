@@ -1,0 +1,1 @@
+INSERT INTO ms_master (msid,msdesc,mstype,createby,createdt) VALUES ('aaa','aaa','MITRA','demo','2018-10-26 02:50:54')

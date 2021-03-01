@@ -1,0 +1,16 @@
+11:05:37----
+INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222010000387', '211907004312', '2020-10-06', 'TUM', '2020-09-02', '', '91', '2020-10-06 11:05:37', 'BROSTAF', 'NRM', '2021-03-01', '1900031046', '12312312', 'CLTKPTUMPR01')
+03:47:30----
+INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222010000389', '211907004883', '2020-10-20', 'RSK', '2020-10-01', '', '91', '2020-10-20 15:47:29', 'BROSTAF', 'SKT', '2021-01-29', '211907004883', '123123123', 'CLTKPRSKMP01')
+03:48:12----
+INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222010000389', '211907004883', '2020-10-20', 'RSK', '2020-10-01', '', '91', '2020-10-20 15:48:12', 'BROSTAF', 'SKT', '2021-01-29', '211907004883', '123123123', 'CLTKPRSKMP01')
+03:48:49----
+INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222010000389', '211907004883', '2020-10-20', 'RSK', '2020-10-01', '', '91', '2020-10-20 15:48:48', 'BROSTAF', 'SKT', '2021-01-29', '211907004883', '123123123', 'CLTKPRSKMP01')
+03:49:01----
+INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222010000389', '211907004883', '2020-10-20', 'RSK', '2020-10-01', '', '91', '2020-10-20 15:49:01', 'BROSTAF', 'SKT', '2021-01-29', '211907004883', '123123123', 'CLTKPRSKMP01')
+03:49:16----
+INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222010000389', '211907004883', '2020-10-20', 'RSK', '2020-10-01', '', '91', '2020-10-20 15:49:16', 'BROSTAF', 'SKT', '2021-01-29', '211907004883', '123123123', 'CLTKPRSKMP01')
+03:55:32----
+INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222010000389', '211907004883', '2020-10-20', 'RSK', '2020-10-01', '', '91', '2020-10-20 15:55:32', 'BROSTAF', 'SKT', '2021-01-29', '211907004883', '123123123', 'CLTKPRSKMP01')
+04:40:42----
+INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222010000393', '211907004887', '2020-10-20', 'RSK', '2020-10-01', '', '91', '2020-10-20 16:40:42', 'BROSTAF', 'SKT', '2021-03-30', '1900029846', '12312312', 'CLTKPRSKPR01')

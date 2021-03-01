@@ -1,0 +1,32 @@
+ INSERT INTO tr_document
+                               (regid,tglupload,nama_file,tipe_file,ukuran_file,FILE,jnsdoc,catdoc)
+                    VALUES     ('211907001932',
+                                '2020-07-19',
+                                '211907001932clmreject',
+                                'pdf',
+                                '233,20 KB',
+                                'modul/files/211907001932clmreject.pdf',
+                                'clmreject',
+                                'clmreject')  - 2020-07-19 23:08:36 INSERT INTO tr_document
+                               (regid,tglupload,nama_file,tipe_file,ukuran_file,FILE,jnsdoc,catdoc)
+                    VALUES     ('211907001932',
+                                '2020-07-19',
+                                '211907001932clmreject',
+                                'pdf',
+                                '233,20 KB',
+                                'modul/files/211907001932clmreject.pdf',
+                                'clmreject',
+                                'clmreject')  - 2020-07-19 23:10:29 INSERT INTO tr_sppa_log 
+                                (regid, status, createby, createdt, comment) 
+                    VALUES      ('211909022191',
+                                 '14',
+                                 'BROSTAF',
+                                 '2020-07-30 14:57:28',
+                                 'Perubahan data, sebelumnya:<br>- Tempat Kejadian: RUMAH SAKIT<br>- Nilai OS: 235.000.000<br>- Tanggal Kejadian: 2020-07-02 - 2020-07-30 14:57:28
+ INSERT INTO tr_sppa_log 
+                                (regid, status, createby, createdt, comment) 
+                    VALUES      ('211909022191',
+                                 '14',
+                                 'BROSTAF',
+                                 '2020-07-30 15:03:17',
+                                 'Perubahan data, sebelumnya:' - 2020-07-30 15:03:17

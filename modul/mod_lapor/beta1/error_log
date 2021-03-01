@@ -1,0 +1,243 @@
+[21-Jul-2020 17:01:07 Asia/Jakarta] PHP Warning:  mysql_num_fields() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 511
+[21-Jul-2020 17:01:07 Asia/Jakarta] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 520
+[21-Jul-2020 17:38:44 Asia/Jakarta] PHP Warning:  mysql_num_fields() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 511
+[21-Jul-2020 17:38:44 Asia/Jakarta] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 520
+[21-Jul-2020 17:41:27 Asia/Jakarta] PHP Warning:  mysql_num_fields() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 511
+[21-Jul-2020 17:41:27 Asia/Jakarta] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 520
+[29-Jul-2020 18:00:22 Asia/Jakarta] PHP Warning:  mysql_num_fields() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 520
+[29-Jul-2020 18:00:22 Asia/Jakarta] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 529
+[29-Jul-2020 18:00:29 Asia/Jakarta] PHP Warning:  mysql_num_fields() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 520
+[29-Jul-2020 18:00:29 Asia/Jakarta] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 529
+[29-Jul-2020 18:00:42 Asia/Jakarta] PHP Warning:  mysql_num_fields() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 520
+[29-Jul-2020 18:00:42 Asia/Jakarta] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 529
+[29-Jul-2020 18:01:59 Asia/Jakarta] PHP Warning:  mysql_num_fields() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 520
+[29-Jul-2020 18:01:59 Asia/Jakarta] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 529
+[30-Jul-2020 08:20:26 Asia/Jakarta] PHP Warning:  mysql_num_fields() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 520
+[30-Jul-2020 08:20:26 Asia/Jakarta] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 529
+[30-Jul-2020 08:21:21 Asia/Jakarta] PHP Warning:  mysql_num_fields() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 520
+[30-Jul-2020 08:21:21 Asia/Jakarta] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 529
+[30-Jul-2020 08:21:52 Asia/Jakarta] PHP Warning:  mysql_num_fields() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 520
+[30-Jul-2020 08:21:52 Asia/Jakarta] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 529
+[30-Jul-2020 08:22:20 Asia/Jakarta] PHP Warning:  mysql_num_fields() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 520
+[30-Jul-2020 08:22:20 Asia/Jakarta] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 529
+[30-Jul-2020 08:22:41 Asia/Jakarta] PHP Warning:  mysql_num_fields() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 520
+[30-Jul-2020 08:22:41 Asia/Jakarta] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 529
+[05-Aug-2020 14:37:16 Asia/Jakarta] PHP Warning:  mysql_num_fields() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 564
+[05-Aug-2020 14:37:16 Asia/Jakarta] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 573
+[28-Sep-2020 15:14:15 Asia/Jakarta] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 3932319 bytes) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 585
+[29-Sep-2020 11:06:56 Asia/Jakarta] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 10223485 bytes) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 588
+[29-Sep-2020 11:24:52 Asia/Jakarta] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 10223485 bytes) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 588
+[30-Sep-2020 13:02:38 Asia/Jakarta] PHP Warning:  mysql_num_fields() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 565
+[30-Sep-2020 13:02:38 Asia/Jakarta] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 571
+[02-Oct-2020 14:29:18 Asia/Jakarta] PHP Fatal error:  Call to a member function runQuery() on null in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 602
+[02-Oct-2020 14:29:26 Asia/Jakarta] PHP Fatal error:  Call to a member function runQuery() on null in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 602
+[02-Oct-2020 14:31:12 Asia/Jakarta] PHP Fatal error:  Call to undefined method mysqli_result::fetchAssoc() in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 602
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_keys() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 615
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 615
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, null given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, null given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, string given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, null given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  array_values() expects parameter 1 to be array, null given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:31:54 Asia/Jakarta] PHP Warning:  implode(): Invalid arguments passed in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 618
+[02-Oct-2020 14:37:38 Asia/Jakarta] PHP Fatal error:  Call to a member function runQuery() on null in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 640
+[06-Oct-2020 11:58:19 Asia/Jakarta] PHP Warning:  mysql_num_fields() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 639
+[06-Oct-2020 11:58:19 Asia/Jakarta] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 645
+[14-Oct-2020 11:39:21 Asia/Jakarta] PHP Warning:  mysql_num_fields() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 603
+[14-Oct-2020 11:39:21 Asia/Jakarta] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 612
+[09-Nov-2020 05:43:40 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php:27) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 28
+[09-Nov-2020 05:43:50 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php:27) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 28
+[09-Nov-2020 05:44:40 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php:27) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 28
+[09-Nov-2020 05:44:40 UTC] PHP Warning:  include(../../../config/koneksi.php): failed to open stream: No such file or directory in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 29
+[09-Nov-2020 05:44:40 UTC] PHP Warning:  include(): Failed opening '../../../config/koneksi.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 29
+[09-Nov-2020 12:44:40 Asia/Jakarta] PHP Fatal error:  Call to a member function query() on null in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 56
+[09-Nov-2020 05:44:44 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php:27) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 28
+[09-Nov-2020 05:44:44 UTC] PHP Warning:  include(../../../config/koneksi.php): failed to open stream: No such file or directory in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 29
+[09-Nov-2020 05:44:44 UTC] PHP Warning:  include(): Failed opening '../../../config/koneksi.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 29
+[09-Nov-2020 12:44:44 Asia/Jakarta] PHP Fatal error:  Call to a member function query() on null in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 56
+[09-Nov-2020 05:45:25 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php:27) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 28
+[09-Nov-2020 05:45:25 UTC] PHP Warning:  include(../../../config/koneksi.php): failed to open stream: No such file or directory in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 29
+[09-Nov-2020 05:45:25 UTC] PHP Warning:  include(): Failed opening '../../../config/koneksi.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 29
+[09-Nov-2020 12:45:25 Asia/Jakarta] PHP Fatal error:  Call to a member function query() on null in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 56
+[09-Nov-2020 05:45:37 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php:27) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 28
+[09-Nov-2020 05:45:37 UTC] PHP Warning:  include(../../../config/koneksi.php): failed to open stream: No such file or directory in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 29
+[09-Nov-2020 05:45:37 UTC] PHP Warning:  include(): Failed opening '../../../config/koneksi.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 29
+[09-Nov-2020 12:45:37 Asia/Jakarta] PHP Fatal error:  Call to a member function query() on null in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 56
+[09-Nov-2020 05:45:42 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php:27) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 28
+[09-Nov-2020 05:45:42 UTC] PHP Warning:  include(../../../config/koneksi.php): failed to open stream: No such file or directory in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 29
+[09-Nov-2020 05:45:42 UTC] PHP Warning:  include(): Failed opening '../../../config/koneksi.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 29
+[09-Nov-2020 12:45:42 Asia/Jakarta] PHP Fatal error:  Call to a member function query() on null in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 56
+[09-Nov-2020 05:48:44 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php:21) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 22
+[09-Nov-2020 05:48:44 UTC] PHP Warning:  include(../../../config/koneksi.php): failed to open stream: No such file or directory in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 23
+[09-Nov-2020 05:48:44 UTC] PHP Warning:  include(): Failed opening '../../../config/koneksi.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 23
+[09-Nov-2020 12:48:44 Asia/Jakarta] PHP Fatal error:  Call to a member function query() on null in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 50
+[09-Nov-2020 05:51:17 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php:27) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 28
+[09-Nov-2020 05:51:17 UTC] PHP Warning:  include(../../../config/koneksi.php): failed to open stream: No such file or directory in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 29
+[09-Nov-2020 05:51:17 UTC] PHP Warning:  include(): Failed opening '../../../config/koneksi.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 29
+[09-Nov-2020 12:51:17 Asia/Jakarta] PHP Fatal error:  Call to a member function query() on null in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 56
+[09-Nov-2020 05:52:03 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php:27) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 28
+[09-Nov-2020 05:52:03 UTC] PHP Warning:  include(../../../config/koneksi.php): failed to open stream: No such file or directory in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 29
+[09-Nov-2020 05:52:03 UTC] PHP Warning:  include(): Failed opening '../../../config/koneksi.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 29
+[09-Nov-2020 12:52:03 Asia/Jakarta] PHP Fatal error:  Call to a member function query() on null in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 56
+[09-Nov-2020 06:19:35 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php:27) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 28
+[09-Nov-2020 06:19:35 UTC] PHP Warning:  include(../../../config/koneksi.php): failed to open stream: No such file or directory in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 29
+[09-Nov-2020 06:19:35 UTC] PHP Warning:  include(): Failed opening '../../../config/koneksi.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 29
+[09-Nov-2020 13:19:35 Asia/Jakarta] PHP Fatal error:  Call to a member function query() on null in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 56
+[09-Nov-2020 06:23:24 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php:28) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 29
+[09-Nov-2020 06:24:31 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php:28) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 29
+[09-Nov-2020 06:29:18 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php:14) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 15
+[09-Nov-2020 06:34:09 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php:14) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 15
+[09-Nov-2020 06:34:41 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php:14) in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 15
+[09-Nov-2020 16:14:36 Asia/Jakarta] PHP Fatal error:  Call to a member function fetch_field() on boolean in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 627
+[09-Nov-2020 16:14:42 Asia/Jakarta] PHP Fatal error:  Call to a member function fetch_field() on boolean in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 627
+[09-Nov-2020 16:21:38 Asia/Jakarta] PHP Fatal error:  Call to a member function fetch_field() on boolean in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 627
+[09-Nov-2020 16:21:45 Asia/Jakarta] PHP Fatal error:  Call to a member function fetch_field() on boolean in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 627
+[09-Nov-2020 10:02:29 UTC] PHP Parse error:  syntax error, unexpected 'lds' (T_STRING), expecting ',' or ';' in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 690
+[10-Nov-2020 10:14:36 Asia/Jakarta] PHP Warning:  mysqli::query(): Empty query in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 666
+[10-Nov-2020 10:14:36 Asia/Jakarta] PHP Fatal error:  Call to a member function fetch_field() on boolean in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 670
+[10-Nov-2020 10:14:39 Asia/Jakarta] PHP Warning:  mysqli::query(): Empty query in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 666
+[10-Nov-2020 10:14:39 Asia/Jakarta] PHP Fatal error:  Call to a member function fetch_field() on boolean in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 670
+[10-Nov-2020 11:18:11 Asia/Jakarta] PHP Warning:  mysqli::query(): Empty query in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 666
+[10-Nov-2020 11:18:11 Asia/Jakarta] PHP Fatal error:  Call to a member function fetch_field() on boolean in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 670
+[20-Nov-2020 09:40:01 Asia/Jakarta] PHP Warning:  mysqli::query(): Empty query in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 666
+[20-Nov-2020 09:40:01 Asia/Jakarta] PHP Fatal error:  Call to a member function fetch_field() on boolean in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 670
+[20-Nov-2020 09:42:40 Asia/Jakarta] PHP Warning:  mysqli::query(): Empty query in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 666
+[20-Nov-2020 09:42:40 Asia/Jakarta] PHP Fatal error:  Call to a member function fetch_field() on boolean in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 670
+[20-Nov-2020 09:43:45 Asia/Jakarta] PHP Warning:  mysqli::query(): Empty query in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 666
+[20-Nov-2020 09:43:45 Asia/Jakarta] PHP Fatal error:  Call to a member function fetch_field() on boolean in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 670
+[20-Nov-2020 09:52:30 Asia/Jakarta] PHP Warning:  mysqli::query(): Empty query in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 666
+[20-Nov-2020 09:52:30 Asia/Jakarta] PHP Fatal error:  Call to a member function fetch_field() on boolean in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 670
+[25-Nov-2020 11:18:33 Asia/Jakarta] PHP Fatal error:  Call to a member function fetch_field() on boolean in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 944
+[25-Nov-2020 13:02:26 Asia/Jakarta] PHP Fatal error:  Call to a member function fetch_field() on boolean in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 948
+[25-Nov-2020 13:50:42 Asia/Jakarta] PHP Fatal error:  Call to a member function fetch_field() on boolean in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 1015
+[25-Nov-2020 13:51:12 Asia/Jakarta] PHP Fatal error:  Call to a member function fetch_field() on boolean in /home/siapdev/public_html/beta/modul/mod_lapor/aksi_lapor.php on line 1015

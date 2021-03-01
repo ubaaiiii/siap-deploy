@@ -1,0 +1,1 @@
+UPDATE tr_claim SET  statclaim='91'  WHERE regid='221912000086'UPDATE tr_claim SET  statclaim='91'  WHERE regid='221912000084'UPDATE tr_claim SET  statclaim='91'  WHERE regid='221912000100'UPDATE tr_claim SET  statclaim='91'  WHERE regid='221912000103'UPDATE tr_claim SET  statclaim='91'  WHERE regid='221912000106'

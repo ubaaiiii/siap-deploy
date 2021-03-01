@@ -1,0 +1,91 @@
+.logo{
+    width:180px;
+    /*padding: 50px 50px 50px 50px;*/
+    margin: 30px 50px 10px 10px;
+}
+.judul_kop{
+    text-align:center;
+    display: block;
+    width: 10000px !important;
+}
+.judul_kop_rl{
+    width: 25% !important;
+}
+.kop{
+    border-collpase:collapse;
+}
+.kop .header{
+    width:130px;
+}
+.kop .judul{
+    text-align:center;
+}
+.kop table{
+    text-align:left;
+    border-collpase:collapse;
+}
+.kop table .cel1{
+    width:200px;
+}
+.kop table .cel2{
+    width:170px;
+}
+.kop table .cel3{
+    width:170px;
+}
+.kop table td{
+    font-size:11px;
+}
+.garis{
+    line-height:1.5px;
+}
+.garis .line1{
+    border:1px solid #000;
+}
+.garis .line2{
+    border:0.5px solid #000;
+}
+.tbl_lap1{
+    margin:20px 0px;
+}
+.tbl_lap1 .cel1{
+    width:180px;
+}
+.tbl_lap1 .cel2{
+    width:200px;
+}
+.tbl_lap1 .cel3{
+    width:290px;
+}
+.judul{
+    margin:20px 0px;
+    text-align:center;
+}
+.tbl_lap2{
+    border-collapse:collapse;
+    border:1px solid #000;
+}
+.tbl_lap2 .cel1{
+    width:20px;
+}
+.tbl_lap2 .cel2{
+    width:200px;
+}
+.tbl_lap2 .cel3{
+    width:400px;
+}
+.tbl_lap2 td{
+    padding:5px 2px;
+}
+.space{
+    padding:10px;
+}
+.tbl_lap3 .cel1{
+    width:300px;
+}
+.tbl_lap3 .cel2{
+    width:100px;
+}
+.tbl_lap3 .cel3{
+    width:300px;
+}

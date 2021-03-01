@@ -1,0 +1,240 @@
+11:05:37----
+INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222010000387', '211907004312', '2020-10-06', 'TUM', '2020-09-02', '', '91', '2020-10-06 11:05:37', 'BROSTAF', 'NRM', '2021-03-01', '1900031046', '12312312', 'CLTKPTUMPR01')
+03:47:30----
+INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222010000389', '211907004883', '2020-10-20', 'RSK', '2020-10-01', '', '91', '2020-10-20 15:47:29', 'BROSTAF', 'SKT', '2021-01-29', '211907004883', '123123123', 'CLTKPRSKMP01')
+03:48:12----
+INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222010000389', '211907004883', '2020-10-20', 'RSK', '2020-10-01', '', '91', '2020-10-20 15:48:12', 'BROSTAF', 'SKT', '2021-01-29', '211907004883', '123123123', 'CLTKPRSKMP01')
+03:48:49----
+INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222010000389', '211907004883', '2020-10-20', 'RSK', '2020-10-01', '', '91', '2020-10-20 15:48:48', 'BROSTAF', 'SKT', '2021-01-29', '211907004883', '123123123', 'CLTKPRSKMP01')
+03:49:01----
+INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222010000389', '211907004883', '2020-10-20', 'RSK', '2020-10-01', '', '91', '2020-10-20 15:49:01', 'BROSTAF', 'SKT', '2021-01-29', '211907004883', '123123123', 'CLTKPRSKMP01')
+03:49:16----
+INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222010000389', '211907004883', '2020-10-20', 'RSK', '2020-10-01', '', '91', '2020-10-20 15:49:16', 'BROSTAF', 'SKT', '2021-01-29', '211907004883', '123123123', 'CLTKPRSKMP01')
+03:55:32----
+INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222010000389', '211907004883', '2020-10-20', 'RSK', '2020-10-01', '', '91', '2020-10-20 15:55:32', 'BROSTAF', 'SKT', '2021-01-29', '211907004883', '123123123', 'CLTKPRSKMP01')
+04:40:42----
+INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222010000393', '211907004887', '2020-10-20', 'RSK', '2020-10-01', '', '91', '2020-10-20 16:40:42', 'BROSTAF', 'SKT', '2021-03-30', '1900029846', '12312312', 'CLTKPRSKPR01')
+2020-11-19 12:48:53----
+UPDATE tr_claim SET statclaim = '92' , verifby = 'BROSTAF' , verifdt = '2020-11-19 12:48:53' WHERE regid = '211907001118'
+2020-11-19 12:48:53----
+UPDATE tr_sppa SET status = '92' WHERE regid = '211907001118'
+2020-11-19 12:48:53----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907001118', '92', 'BROSTAF', '2020-11-19 12:48:53', 'Broker Menyatakan Dokumen Claim Sudah Benar dan Sesuai Isinya')
+2020-11-19 12:56:57---
+UPDATE tr_claim SET statclaim = '92' , verifby = 'BROSTAF' , verifdt = '2020-11-19 12:56:57' WHERE regid = '211907001086'
+2020-11-19 12:56:57---
+UPDATE tr_sppa SET status = '92' WHERE regid = '211907001086'
+2020-11-19 12:56:57---
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907001086', '92', 'BROSTAF', '2020-11-19 12:56:57', 'Broker Menyatakan Dokumen Claim Sudah Benar dan Sesuai Isinya')
+------2020-11-19 12:57:37
+UPDATE tr_claim SET statclaim = '92' , verifby = 'BROSTAF' , verifdt = '2020-11-19 12:57:37' WHERE regid = '211907001942'
+------2020-11-19 12:57:37
+UPDATE tr_sppa SET status = '92' WHERE regid = '211907001942'
+------2020-11-19 12:57:37
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907001942', '92', 'BROSTAF', '2020-11-19 12:57:37', 'Broker Menyatakan Dokumen Claim Sudah Benar dan Sesuai Isinya')
+-2020-11-19 01:05:09
+| DELETE FROM tr_claim WHERE regid = '212002050720'
+-2020-11-19 01:05:09
+| UPDATE tr_sppa SET status = '20' WHERE regid ='212002050720'
+-2020-11-19 01:05:09
+| INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212002050720', '20', 'BROSTAF', '2020-11-19 13:05:09', 'Batal Claim: batal')
+2020-11-20 03:19:23 ---- 
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222011000396', '', '2020-11-20', 'RMH', '2020-11-03', 'Kelengkapannya adalah : Foto debitur sendiri Foto debitur dengan AO Bank Scaning KTP debitur', '91', '2020-11-20 15:19:23', 'BROSTAF', 'SKT', '2020-11-03', '1900109909', '123123123', 'CLTKPRMHPR01')
+2020-11-20 03:19:23 ---- 
+	UPDATE tr_sppa SET status = '91', editby = 'BROSTAF', editdt = '2020-11-20 15:19:23' WHERE regid = ''
+2020-11-20 03:19:23 ---- 
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('', '91', 'BROSTAF', '2020-11-20 15:19:23', 'Kelengkapannya adalah : Foto debitur sendiri Foto debitur dengan AO Bank Scaning KTP debitur')
+2020-11-20 03:19:23 ---- 
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222011000396', '', '2020-11-20', 'RMH', '2020-11-03', 'Kelengkapannya adalah : Foto debitur sendiri Foto debitur dengan AO Bank Scaning KTP debitur', '91', '2020-11-20 15:19:23', 'BROSTAF', 'SKT', '2020-11-03', '1900109909', '123123123', 'CLTKPRMHPR01')
+2020-11-20 03:22:22 ---- 
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222011000397', '', '2020-11-20', 'RSK', '2020-11-03', 'Kelengkapannya adalah : Foto debitur sendiri Foto debitur dengan AO Bank Scaning KTP debitur', '91', '2020-11-20 15:22:22', 'BROSTAF', 'SKT', '2020-11-03', '1900109909', '123123123', 'CLTKPRSKPR01')
+2020-11-20 03:22:22 ---- 
+	UPDATE tr_sppa SET status = '91', editby = 'BROSTAF', editdt = '2020-11-20 15:22:22' WHERE regid = ''
+2020-11-20 03:22:22 ---- 
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('', '91', 'BROSTAF', '2020-11-20 15:22:22', 'Kelengkapannya adalah : Foto debitur sendiri Foto debitur dengan AO Bank Scaning KTP debitur')
+2020-11-20 03:22:22 ---- 
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222011000397', '', '2020-11-20', 'RSK', '2020-11-03', 'Kelengkapannya adalah : Foto debitur sendiri Foto debitur dengan AO Bank Scaning KTP debitur', '91', '2020-11-20 15:22:22', 'BROSTAF', 'SKT', '2020-11-03', '1900109909', '123123123', 'CLTKPRSKPR01')
+2020-11-20 03:28:13 ---- 
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222011000399', '', '2020-11-05', 'RSK', '2020-11-01', 'Kelengkapannya adalah : Foto debitur sendiri Foto debitur dengan AO Bank Scaning KTP debitur', '91', '2020-11-20 15:28:13', 'BROSTAF', 'NRM', '2020-11-01', '1900109909', '123123123', 'CLTKPRSKPR01')
+2020-11-20 03:28:13 ---- 
+	UPDATE tr_sppa SET status = '91', editby = 'BROSTAF', editdt = '2020-11-20 15:28:13' WHERE regid = ''
+2020-11-20 03:28:13 ---- 
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('', '91', 'BROSTAF', '2020-11-20 15:28:13', 'Kelengkapannya adalah : Foto debitur sendiri Foto debitur dengan AO Bank Scaning KTP debitur')
+2020-11-20 03:28:13 ---- 
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222011000399', '', '2020-11-05', 'RSK', '2020-11-01', 'Kelengkapannya adalah : Foto debitur sendiri Foto debitur dengan AO Bank Scaning KTP debitur', '91', '2020-11-20 15:28:13', 'BROSTAF', 'NRM', '2020-11-01', '1900109909', '123123123', 'CLTKPRSKPR01')
+2020-11-20 03:33:56 ---- 211907000323
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222011000403', '211907000323', '2020-11-04', 'RMH', '2020-11-01', 'Kelengkapannya adalah : Foto debitur sendiri Foto debitur dengan AO Bank Scaning KTP debitur', '91', '2020-11-20 15:33:56', 'BROSTAF', 'SKT', '2021-04-30', '1900109909', '123123123', 'CLTKPRMHPR01')
+2020-11-20 03:33:56 ---- 211907000323
+	UPDATE tr_sppa SET status = '91', editby = 'BROSTAF', editdt = '2020-11-20 15:33:56' WHERE regid = '211907000323'
+2020-11-20 03:33:56 ---- 211907000323
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907000323', '91', 'BROSTAF', '2020-11-20 15:33:56', 'Kelengkapannya adalah : Foto debitur sendiri Foto debitur dengan AO Bank Scaning KTP debitur')
+2020-11-20 03:33:56 ---- 211907000323
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222011000403', '211907000323', '2020-11-04', 'RMH', '2020-11-01', 'Kelengkapannya adalah : Foto debitur sendiri Foto debitur dengan AO Bank Scaning KTP debitur', '91', '2020-11-20 15:33:56', 'BROSTAF', 'SKT', '2021-04-30', '1900109909', '123123123', 'CLTKPRMHPR01')
+2020-11-20 03:34:11 ---- 211907000323
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222011000403', '211907000323', '2020-11-04', 'RMH', '2020-11-01', 'Kelengkapannya adalah : Foto debitur sendiri Foto debitur dengan AO Bank Scaning KTP debitur', '91', '2020-11-20 15:34:11', 'BROSTAF', 'SKT', '2021-04-30', '1900109909', '123123123', 'CLTKPRMHPR01')
+2020-11-20 03:34:11 ---- 211907000323
+	UPDATE tr_sppa SET status = '91', editby = 'BROSTAF', editdt = '2020-11-20 15:34:11' WHERE regid = '211907000323'
+2020-11-20 03:34:11 ---- 211907000323
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907000323', '91', 'BROSTAF', '2020-11-20 15:34:11', 'Kelengkapannya adalah : Foto debitur sendiri Foto debitur dengan AO Bank Scaning KTP debitur')
+2020-11-20 03:34:11 ---- 211907000323
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222011000403', '211907000323', '2020-11-04', 'RMH', '2020-11-01', 'Kelengkapannya adalah : Foto debitur sendiri Foto debitur dengan AO Bank Scaning KTP debitur', '91', '2020-11-20 15:34:11', 'BROSTAF', 'SKT', '2021-04-30', '1900109909', '123123123', 'CLTKPRMHPR01')
+2020-11-20 03:34:25 ---- 211907000323
+	DELETE FROM tr_claim WHERE regid = '211907000323'
+2020-11-20 03:34:25 ---- 211907000323
+	UPDATE tr_sppa SET status = '20' WHERE regid ='211907000323'
+2020-11-20 03:34:25 ---- 211907000323
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907000323', '20', 'BROSTAF', '2020-11-20 15:34:25', 'Batal Claim: batal')
+2020-11-20 03:34:54 ---- 211907000323
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222011000404', '211907000323', '2020-11-04', 'RMH', '2020-10-25', '323', '91', '2020-11-20 15:34:54', 'BROSTAF', 'NRM', '2021-04-23', '1900109909', '123123123', 'CLTKPRMHPR01')
+2020-11-20 03:34:54 ---- 211907000323
+	UPDATE tr_sppa SET status = '91', editby = 'BROSTAF', editdt = '2020-11-20 15:34:54' WHERE regid = '211907000323'
+2020-11-20 03:34:54 ---- 211907000323
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907000323', '91', 'BROSTAF', '2020-11-20 15:34:54', '323')
+2020-11-20 03:34:54 ---- 211907000323
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222011000404', '211907000323', '2020-11-04', 'RMH', '2020-10-25', '323', '91', '2020-11-20 15:34:54', 'BROSTAF', 'NRM', '2021-04-23', '1900109909', '123123123', 'CLTKPRMHPR01')
+2020-11-20 03:35:36 ---- 211907000323
+	UPDATE tr_claim SET statclaim = '90' WHERE regid = '211907000323'
+2020-11-20 03:35:36 ---- 211907000323
+	UPDATE tr_sppa SET status = '90', comment= 'pending' WHERE regid = '211907000323'
+2020-11-20 03:35:36 ---- 211907000323
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907000323', '90', 'BROSTAF', '2020-11-20 15:35:36', 'pending')
+2020-11-20 03:58:44 ---- 211907000325
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222011000405', '211907000325', '2020-11-01', 'RMH', '2020-10-25', '211907000325', '91', '2020-11-20 15:58:44', 'BROSTAF', 'ACD', '2021-04-23', '1900110009', '12312312', 'CLTKPRMHPR01')
+2020-11-20 03:58:44 ---- 211907000325
+	UPDATE tr_sppa SET status = '91', editby = 'BROSTAF', editdt = '2020-11-20 15:58:44' WHERE regid = '211907000325'
+2020-11-20 03:58:44 ---- 211907000325
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907000325', '91', 'BROSTAF', '2020-11-20 15:58:44', '211907000325')
+2020-11-20 03:58:44 ---- 211907000325
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222011000405', '211907000325', '2020-11-01', 'RMH', '2020-10-25', '211907000325', '91', '2020-11-20 15:58:44', 'BROSTAF', 'ACD', '2021-04-23', '1900110009', '12312312', 'CLTKPRMHPR01')
+2020-11-20 03:59:44 ---- 211907000325
+	UPDATE tr_claim SET statclaim = '90' WHERE regid = '211907000325'
+2020-11-20 03:59:44 ---- 211907000325
+	UPDATE tr_sppa SET status = '90', comment= 'bWlDakYycEREOEVCcFg5Uzo6MA==' WHERE regid = '211907000325'
+2020-11-20 03:59:45 ---- 211907000325
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907000325', '90', 'BROSTAF', '2020-11-20 15:59:44', 'bWlDakYycEREOEVCcFg5Uzo6MA==')
+2020-11-20 04:00:29 ---- 211907000329
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222011000406', '211907000329', '2020-11-03', 'RSK', '2020-11-01', 'bWlDakYycEREOEVCcFg5Uzo6MA==', '91', '2020-11-20 16:00:29', 'BROSTAF', 'SKT', '2021-03-01', '1900107709', '123123123', 'CLTKPRSKMP01')
+2020-11-20 04:00:29 ---- 211907000329
+	UPDATE tr_sppa SET status = '91', editby = 'BROSTAF', editdt = '2020-11-20 16:00:29' WHERE regid = '211907000329'
+2020-11-20 04:00:29 ---- 211907000329
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907000329', '91', 'BROSTAF', '2020-11-20 16:00:29', 'bWlDakYycEREOEVCcFg5Uzo6MA==')
+2020-11-20 04:00:29 ---- 211907000329
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222011000406', '211907000329', '2020-11-03', 'RSK', '2020-11-01', 'bWlDakYycEREOEVCcFg5Uzo6MA==', '91', '2020-11-20 16:00:29', 'BROSTAF', 'SKT', '2021-03-01', '1900107709', '123123123', 'CLTKPRSKMP01')
+2020-11-20 04:00:38 ---- 211907000329
+	UPDATE tr_claim SET statclaim = '92' , verifby = 'BROSTAF' , verifdt = '2020-11-20 16:00:38' WHERE regid = '211907000329'
+2020-11-20 04:00:38 ---- 211907000329
+	UPDATE tr_sppa SET status = '92' WHERE regid = '211907000329'
+2020-11-20 04:00:38 ---- 211907000329
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907000329', '92', 'BROSTAF', '2020-11-20 16:00:38', 'Broker Menyatakan Dokumen Claim Sudah Benar dan Sesuai Isinya')
+2020-12-01 10:28:26 ---- 211907000182
+	UPDATE tr_claim SET statclaim = '96', comment = 'Hardcopy Dokumen Klaim Telah Diterima oleh Asuransi', hardcopydt = '2020-12-01 10:28:26' WHERE regid = '211907000182'
+2020-12-01 10:28:27 ---- 211907000182
+	UPDATE tr_sppa SET status = '96', comment = 'Hardcopy Dokumen Klaim Telah Diterima oleh Asuransi' WHERE regid = '211907000182'
+2020-12-01 10:29:24 ---- 211907000329
+	UPDATE tr_claim SET statclaim = '90' WHERE regid = '211907000329'
+2020-12-01 10:29:25 ---- 211907000329
+	UPDATE tr_sppa SET status = '90', comment= 'Kekurangan Form Pengajuan Asuransi' WHERE regid = '211907000329'
+2020-12-01 10:29:25 ---- 211907000329
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907000329', '90', 'INSSTAF', '2020-12-01 10:29:24', 'Kekurangan Form Pengajuan Asuransi')
+2020-12-02 02:45:44 ---- 
+	UPDATE tr_claim SET statclaim = '93' , validby = 'INSSTAF' , validdt = '2020-12-02 14:45:44' WHERE regid = ''
+2020-12-02 02:45:44 ---- 
+	UPDATE tr_sppa SET status = '93' WHERE regid = ''
+2020-12-02 02:45:45 ---- 
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('', '93', 'INSSTAF', '2020-12-02 14:45:44', 'Asuransi Menyatakan Claim Diterima, Menunggu Kelengkapan Dokumen Tiba di Asuransi')
+2020-12-02 02:46:28 ---- 211907001938
+	UPDATE tr_claim SET statclaim = '93' , validby = 'INSSTAF' , validdt = '2020-12-02 14:46:28' WHERE regid = '211907001938'
+2020-12-02 02:46:28 ---- 211907001938
+	UPDATE tr_sppa SET status = '93' WHERE regid = '211907001938'
+2020-12-02 02:46:28 ---- 211907001938
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907001938', '93', 'INSSTAF', '2020-12-02 14:46:28', 'Asuransi Menyatakan Claim Diterima, Menunggu Kelengkapan Dokumen Tiba di Asuransi')
+2020-12-02 02:57:06 ---- 211907001938
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) SELECT '211907001938', '96', 'INSSTAF', '2020-12-02 14:57:06', 'Hardcopy Dokumen Klaim Telah Diterima oleh Asuransi'
+2020-12-02 02:57:06 ---- 211907001938
+	UPDATE tr_claim SET statclaim = '96', comment = 'Hardcopy Dokumen Klaim Telah Diterima oleh Asuransi', hardcopydt = '2020-12-02 14:57:06' WHERE regid = '211907001938'
+2020-12-02 02:57:06 ---- 211907001938
+	UPDATE tr_sppa SET status = '96', comment = 'Hardcopy Dokumen Klaim Telah Diterima oleh Asuransi' WHERE regid = '211907001938'
+2020-12-02 02:57:26 ---- 211907003878
+	UPDATE tr_claim SET statclaim = '93' , validby = 'INSSTAF' , validdt = '2020-12-02 14:57:26' WHERE regid = '211907003878'
+2020-12-02 02:57:26 ---- 211907003878
+	UPDATE tr_sppa SET status = '93' WHERE regid = '211907003878'
+2020-12-02 02:57:26 ---- 211907003878
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907003878', '93', 'INSSTAF', '2020-12-02 14:57:26', 'Asuransi Menyatakan Claim Diterima, Menunggu Kelengkapan Dokumen Tiba di Asuransi')
+2020-12-02 03:16:14 ---- 211907003878
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) SELECT '211907003878', '96', 'INSSTAF', '2020-12-01', 'Hardcopy Dokumen Klaim Telah Diterima oleh Asuransi'
+2020-12-02 03:16:14 ---- 211907003878
+	UPDATE tr_claim SET statclaim = '96', comment = 'Hardcopy Dokumen Klaim Telah Diterima oleh Asuransi', hardcopydt = '2020-12-01' WHERE regid = '211907003878'
+2020-12-02 03:16:14 ---- 211907003878
+	UPDATE tr_sppa SET status = '96', comment = 'Hardcopy Dokumen Klaim Telah Diterima oleh Asuransi' WHERE regid = '211907003878'
+2020-12-02 03:22:55 ---- 211907001118
+	UPDATE tr_claim SET statclaim = '93' , validby = 'INSSTAF' , validdt = '2020-12-02 15:22:55' WHERE regid = '211907001118'
+2020-12-02 03:22:55 ---- 211907001118
+	UPDATE tr_sppa SET status = '93' WHERE regid = '211907001118'
+2020-12-02 03:22:55 ---- 211907001118
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907001118', '93', 'INSSTAF', '2020-12-02 15:22:55', 'Asuransi Menyatakan Claim Diterima, Menunggu Kelengkapan Dokumen Tiba di Asuransi')
+2020-12-02 03:23:01 ---- 211907001086
+	UPDATE tr_claim SET statclaim = '93' , validby = 'INSSTAF' , validdt = '2020-12-02 15:23:01' WHERE regid = '211907001086'
+2020-12-02 03:23:01 ---- 211907001086
+	UPDATE tr_sppa SET status = '93' WHERE regid = '211907001086'
+2020-12-02 03:23:01 ---- 211907001086
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907001086', '93', 'INSSTAF', '2020-12-02 15:23:01', 'Asuransi Menyatakan Claim Diterima, Menunggu Kelengkapan Dokumen Tiba di Asuransi')
+2020-12-10 10:16:32 ---- 211907000335
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012000409', '211907000335', '2020-12-10', 'RMH', '2020-12-01', 'nilai os 0', '91', '2020-12-10 10:16:32', 'BROSTAF', 'DOA', '2021-05-30', '1900069121', '0', 'CLTKPRMHPR01')
+2020-12-10 10:16:32 ---- 211907000335
+	UPDATE tr_sppa SET status = '91', editby = 'BROSTAF', editdt = '2020-12-10 10:16:32' WHERE regid = '211907000335'
+2020-12-10 10:16:32 ---- 211907000335
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907000335', '91', 'BROSTAF', '2020-12-10 10:16:32', 'nilai os 0')
+2020-12-10 10:16:32 ---- 211907000335
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012000409', '211907000335', '2020-12-10', 'RMH', '2020-12-01', 'nilai os 0', '91', '2020-12-10 10:16:32', 'BROSTAF', 'DOA', '2021-05-30', '1900069121', '0', 'CLTKPRMHPR01')
+2020-12-10 10:16:54 ---- 
+	UPDATE tr_claim SET statclaim = '92' , verifby = 'BROSTAF' , verifdt = '2020-12-10 10:16:54' WHERE regid = ''
+2020-12-10 10:16:54 ---- 
+	UPDATE tr_sppa SET status = '92' WHERE regid = ''
+2020-12-10 10:16:54 ---- 
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('', '92', 'BROSTAF', '2020-12-10 10:16:54', 'Broker Menyatakan Dokumen Claim Sudah Benar dan Sesuai Isinya')
+2020-12-10 10:17:37 ---- 211907000335
+	UPDATE tr_claim SET statclaim = '92' , verifby = 'BROSTAF' , verifdt = '2020-12-10 10:17:36' WHERE regid = '211907000335'
+2020-12-10 10:17:37 ---- 211907000335
+	UPDATE tr_sppa SET status = '92' WHERE regid = '211907000335'
+2020-12-10 10:17:37 ---- 211907000335
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907000335', '92', 'BROSTAF', '2020-12-10 10:17:36', 'Broker Menyatakan Dokumen Claim Sudah Benar dan Sesuai Isinya')
+2020-12-11 10:34:00 ---- 211907000338
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012000410', '211907000338', '2020-12-11', 'RMH', '2020-12-01', 'Mohon untuk melampirkan Foto Debitur dengan AO/MRnya. Terima kasih.', '91', '2020-12-11 10:34:00', 'BROSTAF', 'ACD', '2021-05-30', '1900034028', '0', 'CLTKPRMHPR01')
+2020-12-11 10:34:00 ---- 211907000338
+	UPDATE tr_sppa SET status = '91', editby = 'BROSTAF', editdt = '2020-12-11 10:34:00' WHERE regid = '211907000338'
+2020-12-11 10:34:00 ---- 211907000338
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907000338', '91', 'BROSTAF', '2020-12-11 10:34:00', 'Mohon untuk melampirkan Foto Debitur dengan AO/MRnya. Terima kasih.')
+2020-12-11 10:34:00 ---- 211907000338
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012000410', '211907000338', '2020-12-11', 'RMH', '2020-12-01', 'Mohon untuk melampirkan Foto Debitur dengan AO/MRnya. Terima kasih.', '91', '2020-12-11 10:34:00', 'BROSTAF', 'ACD', '2021-05-30', '1900034028', '0', 'CLTKPRMHPR01')
+2020-12-15 01:57:19 ---- 211907000343
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012000416', '211907000343', '2020-12-15', 'RMH', '2020-12-01', '', '91', '2020-12-15 13:57:19', 'BROSTAF', 'DOA', '2021-05-30', ' 1900136708', '12312312', 'CLTKPRMHPR01')
+2020-12-15 01:57:19 ---- 211907000343
+	UPDATE tr_sppa SET status = '91', editby = 'BROSTAF', editdt = '2020-12-15 13:57:19' WHERE regid = '211907000343'
+2020-12-15 01:57:19 ---- 211907000343
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907000343', '91', 'BROSTAF', '2020-12-15 13:57:19', '')
+2020-12-15 01:57:19 ---- 211907000343
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012000416', '211907000343', '2020-12-15', 'RMH', '2020-12-01', '', '91', '2020-12-15 13:57:19', 'BROSTAF', 'DOA', '2021-05-30', ' 1900136708', '12312312', 'CLTKPRMHPR01')
+2020-12-15 02:04:06 ---- 211907000345
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012000418', '211907000345', '2020-12-15', 'RSK', '2020-12-1', '', '91', '2020-12-15 14:04:06', 'BROSTAF', 'ACD', '2021-05-30', '1900136808 ', '12312312', 'CLTKPRSKPR01')
+2020-12-15 02:04:06 ---- 211907000345
+	UPDATE tr_sppa SET status = '91', editby = 'BROSTAF', editdt = '2020-12-15 14:04:06' WHERE regid = '211907000345'
+2020-12-15 02:04:06 ---- 211907000345
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907000345', '91', 'BROSTAF', '2020-12-15 14:04:06', '')
+2020-12-15 02:04:06 ---- 211907000345
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012000418', '211907000345', '2020-12-15', 'RSK', '2020-12-1', '', '91', '2020-12-15 14:04:06', 'BROSTAF', 'ACD', '2021-05-30', '1900136808 ', '12312312', 'CLTKPRSKPR01')
+2020-12-17 09:46:42 ---- 211907000351
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012000426', '211907000351', '2020-12-17', 'RMH', '2020-12-01', '', '91', '2020-12-17 09:46:41', 'BROSTAF', 'ACD', '2021-05-30', '1900134308', '12312312', 'CLTKPRMHPR01')
+2020-12-17 09:46:42 ---- 211907000351
+	UPDATE tr_sppa SET status = '91', editby = 'BROSTAF', editdt = '2020-12-17 09:46:41' WHERE regid = '211907000351'
+2020-12-17 09:46:42 ---- 211907000351
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907000351', '91', 'BROSTAF', '2020-12-17 09:46:41', '')
+2020-12-17 09:46:42 ---- 211907000351
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012000426', '211907000351', '2020-12-17', 'RMH', '2020-12-01', '', '91', '2020-12-17 09:46:41', 'BROSTAF', 'ACD', '2021-05-30', '1900134308', '12312312', 'CLTKPRMHPR01')
+2020-12-17 09:48:11 ---- 211907000356
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012000428', '211907000356', '2020-12-17', 'RMH', '2020-12-01', '', '91', '2020-12-17 09:48:11', 'BROSTAF', 'ACD', '2021-03-31', '1900076005', '123123123', 'CLTKPRMHMP01')
+2020-12-17 09:48:12 ---- 211907000356
+	UPDATE tr_sppa SET status = '91', editby = 'BROSTAF', editdt = '2020-12-17 09:48:11' WHERE regid = '211907000356'
+2020-12-17 09:48:12 ---- 211907000356
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907000356', '91', 'BROSTAF', '2020-12-17 09:48:11', '')
+2020-12-17 09:48:12 ---- 211907000356
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012000428', '211907000356', '2020-12-17', 'RMH', '2020-12-01', '', '91', '2020-12-17 09:48:11', 'BROSTAF', 'ACD', '2021-03-31', '1900076005', '123123123', 'CLTKPRMHMP01')

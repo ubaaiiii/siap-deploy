@@ -1,0 +1,90 @@
+2020-10-15 02:41:08----
+INSERT INTO tr_sppa_cancel (regid, tglbatal, refund, masa, sisa, createby, createdt, statcan, catreason, reason) SELECT a.regid, '2020-10-15', IF (b.regid IS NULL, 0, IF (Datediff('2020-10-15', b.paiddt) < 30, a.premi, (Floor(Datediff(akhir, '2020-10-15') / 30.4) / masa ) * (tpremi * 50 / 100 ))), masa, Floor(Datediff(akhir, '2020-10-15') / 30.4), 'BROSTAF', '2020-10-15 14:41:08', '1', 'RB', 'asdasdasd' FROM tr_sppa a LEFT JOIN tr_sppa_paid b ON a.regid = b.regid AND b.paidtype = 'REFUND' WHERE a.regid = '211907000788' AND b.regid IS NULL
+2020-10-15 02:41:08----
+UPDATE tr_sppa SET status = '8' WHERE regid = '211907000788'
+2020-10-15 02:41:08----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt) VALUES ('211907000788', '8', 'BROSTAF', '2020-10-15 14:41:08')
+2020-10-15 02:42:52 ---- 211907000791
+INSERT INTO tr_sppa_cancel (regid, tglbatal, refund, masa, sisa, createby, createdt, statcan, catreason, reason) SELECT a.regid, '2020-10-15', IF (b.regid IS NULL, 0, IF (Datediff('2020-10-15', b.paiddt) < 30, a.premi, (Floor(Datediff(akhir, '2020-10-15') / 30.4) / masa ) * (tpremi * 50 / 100 ))), masa, Floor(Datediff(akhir, '2020-10-15') / 30.4), 'BROSTAF', '2020-10-15 14:42:52', '1', 'RB', 'asfasf' FROM tr_sppa a LEFT JOIN tr_sppa_paid b ON a.regid = b.regid AND b.paidtype = 'REFUND' WHERE a.regid = '211907000791' AND b.regid IS NULL
+2020-10-15 02:42:52 ---- 211907000791
+UPDATE tr_sppa SET status = '8' WHERE regid = '211907000791'
+2020-10-15 02:42:52 ---- 211907000791
+INSERT INTO tr_sppa_log (regid, status, createby, createdt) VALUES ('211907000791', '8', 'BROSTAF', '2020-10-15 14:42:52')
+2020-10-15 03:57:53 ---- 211907000937
+	INSERT INTO tr_sppa_cancel (regid, tglbatal, refund, masa, sisa, createby, createdt, statcan, catreason, reason) SELECT a.regid, '2020-10-15', IF (b.regid IS NULL, 0, IF (Datediff('2020-10-15', b.paiddt) < 30, a.premi, (Floor(Datediff(akhir, '2020-10-15') / 30.4) / masa ) * (tpremi * 50 / 100 ))), masa, Floor(Datediff(akhir, '2020-10-15') / 30.4), 'BROSTAF', '2020-10-15 15:57:53', '1', 'RB', 'asdfasdf' FROM tr_sppa a LEFT JOIN tr_sppa_paid b ON a.regid = b.regid AND b.paidtype = 'REFUND' WHERE a.regid = '211907000937' AND b.regid IS NULL
+2020-10-15 03:57:53 ---- 211907000937
+	UPDATE tr_sppa SET status = '8' WHERE regid = '211907000937'
+2020-10-15 03:57:53 ---- 211907000937
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt) VALUES ('211907000937', '8', 'BROSTAF', '2020-10-15 15:57:53')
+2020-11-03 05:02:49 ---- 212002050718
+	INSERT INTO tr_sppa_cancel (regid, tglbatal, refund, masa, sisa, createby, createdt, statcan, catreason, reason) SELECT a.regid, '2020-11-03', IF (b.regid IS NULL, 0, IF (Datediff('2020-11-03', b.paiddt) < 30, a.premi, (Floor(Datediff(akhir, '2020-11-03') / 30.4) / masa ) * (tpremi * 50 / 100 ))), masa, Floor(Datediff(akhir, '2020-11-03') / 30.4), 'BROSTAF', '2020-11-03 17:02:48', '1', 'RT', 'batal' FROM tr_sppa a LEFT JOIN tr_sppa_paid b ON a.regid = b.regid AND b.paidtype = 'REFUND' WHERE a.regid = '212002050718' AND b.regid IS NULL
+2020-11-03 05:02:49 ---- 212002050718
+	UPDATE tr_sppa SET status = '8' WHERE regid = '212002050718'
+2020-11-03 05:02:49 ---- 212002050718
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt) VALUES ('212002050718', '8', 'BROSTAF', '2020-11-03 17:02:48')
+2020-11-10 11:47:25 ---- 211907000947
+	INSERT INTO tr_sppa_cancel (regid, tglbatal, refund, masa, sisa, createby, createdt, statcan, catreason, reason) SELECT a.regid, '2020-11-10', IF (b.regid IS NULL, 0, IF (Datediff('2020-11-10', b.paiddt) < 30, a.premi, (Floor(Datediff(akhir, '2020-11-10') / 30.4) / masa ) * (tpremi * 50 / 100 ))), masa, Floor(Datediff(akhir, '2020-11-10') / 30.4), 'BROSTAF', '2020-11-10 11:47:25', '1', 'RB', 'nyoba refund' FROM tr_sppa a LEFT JOIN tr_sppa_paid b ON a.regid = b.regid AND b.paidtype = 'REFUND' WHERE a.regid = '211907000947' AND b.regid IS NULL
+2020-11-10 11:47:25 ---- 211907000947
+	UPDATE tr_sppa SET status = '8' WHERE regid = '211907000947'
+2020-11-10 11:47:26 ---- 211907000947
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt) VALUES ('211907000947', '8', 'BROSTAF', '2020-11-10 11:47:25')
+2020-11-10 11:47:35 ---- 211907000947
+	INSERT INTO tr_billing (billno, billdt, duedt, policyno, reffno, grossamt, nettamt, admamt, discamt, totalamt, remark, billtype) SELECT Concat(aa.prevno, Date_format(Now(), aa.formdt), aa.billno) sbillno, Now(), Date_add(Now(), interval 15 day), bb.policyno, regid endorsno, gpremi, gpremi, 0, 0, gpremi, Concat('Refund Premi ; tanggal batal ', bb.tglbatal), 1 FROM (SELECT a.prevno, Concat(Right(Concat(a.formseqno, b.lastno), formseqlen)) billno, formdt FROM tbl_lastno_form a inner join tbl_lastno_trans b ON a.trxid = b.trxid WHERE a.trxid = 'billpre') aa, (SELECT a.regid, b.policyno, SUM(a.refund) *- 1 gpremi, a.tglbatal FROM tr_sppa_cancel a inner join tr_sppa b ON a.regid = b.regid WHERE a.regid = '211907000947' GROUP BY b.policyno, a.regid) bb
+2020-11-10 11:47:35 ---- 211907000947
+	UPDATE tbl_lastno_trans SET lastno = lastno + 1 WHERE trxid = 'billpre'
+2020-11-10 11:47:35 ---- 211907000947
+	UPDATE tr_sppa SET status = '82', editby = 'BROSTAF', editdt = '2020-11-10 11:47:35' WHERE regid = '211907000947' AND status = '8'
+2020-11-10 11:47:35 ---- 211907000947
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt) VALUES ('211907000947', '82', 'BROSTAF', '2020-11-10 11:47:35')
+2020-11-10 11:48:27 ---- 211907000947
+	UPDATE tr_sppa SET status = '83', editby = 'INSSTAF', editdt = '2020-11-10 11:48:27' WHERE regid = '211907000947' AND status = '82'
+2020-11-10 11:48:27 ---- 211907000947
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt) VALUES ('211907000947', '83', 'INSSTAF', '2020-11-10 11:48:27')
+2020-11-10 12:18:23 ---- 211907001165
+	INSERT INTO tr_sppa_cancel (regid, tglbatal, refund, masa, sisa, createby, createdt, statcan, catreason, reason) SELECT a.regid, '2020-11-09', IF (b.regid IS NULL, 0, IF (Datediff('2020-11-09', b.paiddt) < 30, a.premi, (Floor(Datediff(akhir, '2020-11-09') / 30.4) / masa ) * (tpremi * 50 / 100 ))), masa, Floor(Datediff(akhir, '2020-11-09') / 30.4), 'BROSTAF', '2020-11-10 12:18:23', '1', 'RB', '' FROM tr_sppa a LEFT JOIN tr_sppa_paid b ON a.regid = b.regid AND b.paidtype = 'PREMI' WHERE a.regid = '211907001165' AND b.regid IS NULL
+2020-11-10 12:18:23 ---- 211907001165
+	UPDATE tr_sppa SET status = '8' WHERE regid = '211907001165'
+2020-11-10 12:18:23 ---- 211907001165
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt) VALUES ('211907001165', '8', 'BROSTAF', '2020-11-10 12:18:23')
+2020-11-10 12:24:08 ---- 211907001175
+	INSERT INTO tr_sppa_cancel (regid, tglbatal, refund, masa, sisa, createby, createdt, statcan, catreason, reason) SELECT a.regid, '2020-11-09', IF (b.regid IS NULL, 0, IF (Datediff('2020-11-09', b.paiddt) < 30, a.premi, (Floor(Datediff(akhir, '2020-11-09') / 30.4) / masa ) * (tpremi * 50 / 100 ))), masa, Floor(Datediff(akhir, '2020-11-09') / 30.4), 'BROSTAF', '2020-11-10 12:24:08', '1', 'RB', 'asdf' FROM tr_sppa a LEFT JOIN tr_sppa_paid b ON a.regid = b.regid AND b.paidtype = 'PREMI' WHERE a.regid = '211907001175' AND b.regid IS NULL
+2020-11-10 12:24:08 ---- 211907001175
+	UPDATE tr_sppa SET status = '8' WHERE regid = '211907001175'
+2020-11-10 12:24:08 ---- 211907001175
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt) VALUES ('211907001175', '8', 'BROSTAF', '2020-11-10 12:24:08')
+2020-11-10 12:31:06 ---- 211907001451
+	INSERT INTO tr_sppa_cancel (regid, tglbatal, refund, masa, sisa, createby, createdt, statcan, catreason, reason) SELECT a.regid, '2020-11-09', IF (b.regid IS NULL, 0, IF (Datediff('2020-11-09', b.paiddt) < 30, a.premi, (Floor(Datediff(akhir, '2020-11-09') / 30.4) / masa ) * (tpremi * 50 / 100 ))), masa, Floor(Datediff(akhir, '2020-11-09') / 30.4), 'BROSTAF', '2020-11-10 12:31:06', '1', 'RB', 'asd' FROM tr_sppa a LEFT JOIN tr_sppa_paid b ON a.regid = b.regid AND b.paidtype = 'PREMI' WHERE a.regid = '211907001451' AND b.regid IS NULL
+2020-11-10 12:31:06 ---- 211907001451
+	UPDATE tr_sppa SET status = '8' WHERE regid = '211907001451'
+2020-11-10 12:31:06 ---- 211907001451
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt) VALUES ('211907001451', '8', 'BROSTAF', '2020-11-10 12:31:06')
+2020-11-10 12:32:21 ---- 211907001784
+	INSERT INTO tr_sppa_cancel (regid, tglbatal, refund, masa, sisa, createby, createdt, statcan, catreason, reason) SELECT a.regid, '2020-11-03', IF (b.regid IS NULL, 0, IF (Datediff('2020-11-03', b.paiddt) < 30, a.premi, (Floor(Datediff(akhir, '2020-11-03') / 30.4) / masa ) * (tpremi * 50 / 100 ))), masa, Floor(Datediff(akhir, '2020-11-03') / 30.4), 'BROSTAF', '2020-11-10 12:32:21', '1', 'RB', '' FROM tr_sppa a LEFT JOIN tr_sppa_paid b ON a.regid = b.regid AND b.paidtype = 'PREMI' WHERE a.regid = '211907001784' AND b.regid IS NOT NULL
+2020-11-10 12:32:21 ---- 211907001784
+	UPDATE tr_sppa SET status = '8' WHERE regid = '211907001784'
+2020-11-10 12:32:21 ---- 211907001784
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt) VALUES ('211907001784', '8', 'BROSTAF', '2020-11-10 12:32:21')
+2020-11-10 12:32:30 ---- QWw0K2tNRkM4L3J1SzdacDo6MA==
+	UPDATE tr_sppa SET status = '', editby = 'BROSTAF', editdt = '2020-11-10 12:32:30' WHERE regid = 'QWw0K2tNRkM4L3J1SzdacDo6MA==' AND status = ''
+2020-11-10 12:32:30 ---- QWw0K2tNRkM4L3J1SzdacDo6MA==
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt) VALUES ('QWw0K2tNRkM4L3J1SzdacDo6MA==', '', 'BROSTAF', '2020-11-10 12:32:30')
+2020-11-10 12:32:37 ---- QWw0K2tNRkM4L3J1SzdacDo6MA==
+	UPDATE tr_sppa SET status = '', editby = 'BROSTAF', editdt = '2020-11-10 12:32:37' WHERE regid = 'QWw0K2tNRkM4L3J1SzdacDo6MA==' AND status = ''
+2020-11-10 12:32:37 ---- QWw0K2tNRkM4L3J1SzdacDo6MA==
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt) VALUES ('QWw0K2tNRkM4L3J1SzdacDo6MA==', '', 'BROSTAF', '2020-11-10 12:32:37')
+2020-11-10 12:33:02 ---- 211907001784
+	INSERT INTO tr_billing (billno, billdt, duedt, policyno, reffno, grossamt, nettamt, admamt, discamt, totalamt, remark, billtype) SELECT Concat(aa.prevno, Date_format(Now(), aa.formdt), aa.billno) sbillno, Now(), Date_add(Now(), interval 15 day), bb.policyno, regid endorsno, gpremi, gpremi, 0, 0, gpremi, Concat('Refund Premi ; tanggal batal ', bb.tglbatal), 1 FROM (SELECT a.prevno, Concat(Right(Concat(a.formseqno, b.lastno), formseqlen)) billno, formdt FROM tbl_lastno_form a inner join tbl_lastno_trans b ON a.trxid = b.trxid WHERE a.trxid = 'billpre') aa, (SELECT a.regid, b.policyno, SUM(a.refund) *- 1 gpremi, a.tglbatal FROM tr_sppa_cancel a inner join tr_sppa b ON a.regid = b.regid WHERE a.regid = '211907001784' GROUP BY b.policyno, a.regid) bb
+2020-11-10 12:33:02 ---- 211907001784
+	UPDATE tbl_lastno_trans SET lastno = lastno + 1 WHERE trxid = 'billpre'
+2020-11-10 12:33:02 ---- 211907001784
+	UPDATE tr_sppa SET status = '82', editby = 'BROSTAF', editdt = '2020-11-10 12:33:02' WHERE regid = '211907001784' AND status = '8'
+2020-11-10 12:33:02 ---- 211907001784
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt) VALUES ('211907001784', '82', 'BROSTAF', '2020-11-10 12:33:02')
+2020-11-10 12:33:32 ---- STdhcXQvWDJlenpPWnZ2SDo6MA==
+	UPDATE tr_sppa SET status = '', editby = 'INSSTAF', editdt = '2020-11-10 12:33:32' WHERE regid = 'STdhcXQvWDJlenpPWnZ2SDo6MA==' AND status = ''
+2020-11-10 12:33:32 ---- STdhcXQvWDJlenpPWnZ2SDo6MA==
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt) VALUES ('STdhcXQvWDJlenpPWnZ2SDo6MA==', '', 'INSSTAF', '2020-11-10 12:33:32')
+2020-11-10 12:33:48 ---- 211907001784
+	UPDATE tr_sppa SET status = '83', editby = 'INSSTAF', editdt = '2020-11-10 12:33:48' WHERE regid = '211907001784' AND status = '82'
+2020-11-10 12:33:48 ---- 211907001784
+	INSERT INTO tr_sppa_log (regid, status, createby, createdt) VALUES ('211907001784', '83', 'INSSTAF', '2020-11-10 12:33:48')

@@ -1,0 +1,8 @@
+06:21:02----
+INSERTINTOStr_sppa_cancel(regid,tglbatal,refund,masa,sisa,createby,createdt,statcan,catreason,reason)SELECTregid,'2020-08-25',0,masa,Floor(Datediff(akhir,'2020-08-25')/30.4),'BROSTAF','2020-08-2518:21:02','1','UL',''FROMtr_sppaWHEREregid='212002050988'
+06:22:19----
+INSERT INTOS tr_sppa_cancel (regid, tglbatal, refund, masa, sisa, createby, createdt, statcan, catreason, reason) SELECT regid, '2020-08-25', 0, masa, Floor(Datediff(akhir, '2020-08-25') / 30.4), 'BROSTAF', '2020-08-25 18:22:19', '1', 'UL', '' FROM tr_sppa WHERE regid = '212002050988'
+10:42:08----
+INSERT INTO tr_sppa_cancel (regid, tglbatal, refund, masa, sisa, createby, createdt, statcan, catreason, reason) SELECT a.regid, '', IF (b.regid IS NULL, 0, IF (Datediff('', b.paiddt) < 30), a.premi, (Floor(Datediff(akhir, '') / 30.4) / masa ) * (tpremi * 50 / 100 ) ), masa, Floor(Datediff(akhir, '') / 30.4), 'BROSTAF', '2020-09-04 10:42:08', '1', '', '' FROM tr_sppa a LEFT JOIN tr_sppa_paid b ON a.regid = b.regid WHERE a.regid = '' AND b.regid IS NULL
+10:42:27----
+INSERT INTO tr_sppa_cancel (regid, tglbatal, refund, masa, sisa, createby, createdt, statcan, catreason, reason) SELECT a.regid, '', IF (b.regid IS NULL, 0, IF (Datediff('', b.paiddt) < 30), a.premi, (Floor(Datediff(akhir, '') / 30.4) / masa ) * (tpremi * 50 / 100 ) ), masa, Floor(Datediff(akhir, '') / 30.4), 'BROSTAF', '2020-09-04 10:42:27', '1', '', '' FROM tr_sppa a LEFT JOIN tr_sppa_paid b ON a.regid = b.regid WHERE a.regid = '' AND b.regid IS NULL

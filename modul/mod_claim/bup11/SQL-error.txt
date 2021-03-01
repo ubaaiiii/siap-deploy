@@ -1,0 +1,14 @@
+2020-12-15 07:18:35 ---- 211911036240
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012001526', '211911036240', '15/12/2020', 'RMH', '29/9/2020', '', '90', '2020-12-15 07:18:35', 'CHKSTSOR54', 'LSC', '', '1900065054', '0', 'CLTKPRMHMP01')
+2020-12-17 08:48:25 ---- 211908011892
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012001547', '211908011892', '17-12-2020', 'RMH', '18-11-2020', 'DLP 70', '90', '2020-12-17 08:48:25', 'RICCA33324', 'LSC', '2021-05-17', '1900036655', '122781337', 'CLTKPRMHPR01')
+2020-12-17 08:49:35 ---- 211908011892
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012001548', '211908011892', '17-12-2020', 'RMH', '18-11-2020', 'DLP 70', '90', '2020-12-17 08:49:35', 'RICCA33324', 'LSC', '2021-05-17', '1900036655', '122781337', 'CLTKPRMHPR01')
+2020-12-17 08:50:26 ---- 211908011892
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012001550', '211908011892', '17-12-2020', 'RMH', '18-11-2020', 'DLP 70', '90', '2020-12-17 08:50:26', 'RICCA33324', 'LSC', '2021-05-17', '1900036655', '122781337', 'CLTKPRMHPR01')
+2020-12-17 08:51:51 ---- 211908011892
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012001552', '211908011892', '17-12-2020', 'RMH', '18-11-2020', 'DLP 70', '90', '2020-12-17 08:51:51', 'RICCA33324', 'LSC', '2021-05-17', '1900036655', '122781337', 'CLTKPRMHPR01')
+2020-12-18 03:13:27 ---- 212005065396
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012001569', '212005065396', '--17 Desember 2020', 'RMH', '--19 November 2020', '', '90', '2020-12-18 15:13:27', 'YUBELI3330', 'LSC', '', '2000099533', '194691748', 'CLETIRMHPR01')
+2020-12-18 03:15:05 ---- 212005065396
+	INSERT INTO tr_claim (regclaim, regid, tgllapor, tmpkejadian, tglkejadian, detail, statclaim, createdt, createby, penyebab, expireddt, nopk, nilaios,doctype) VALUES ('222012001570', '212005065396', '--17122020', 'RMH', '--19112020', '', '90', '2020-12-18 15:15:05', 'YUBELI3330', 'LSC', '', '2000099533', '194691748', 'CLETIRMHPR01')

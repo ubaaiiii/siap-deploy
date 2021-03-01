@@ -1,0 +1,522 @@
+2020-11-18 10:55:09----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212001045182'
+2020-11-18 10:55:09----
+UPDATE tr_sppa SET status = '90', comment= 'HC Akta Kematian yang dilegalisir' WHERE regid = '212001045182'
+2020-11-18 10:55:09----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212001045182', '90', 'ATKP013159', '2020-11-18 10:55:09', 'HC Akta Kematian yang dilegalisir')
+2020-11-18 10:55:28----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212001045195'
+2020-11-18 10:55:28----
+UPDATE tr_sppa SET status = '90', comment= 'HC Akta Kematian yang dilegalisir' WHERE regid = '212001045195'
+2020-11-18 10:55:28----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212001045195', '90', 'ATKP013159', '2020-11-18 10:55:28', 'HC Akta Kematian yang dilegalisir')
+2020-11-18 10:57:06----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211907000603'
+2020-11-18 10:57:06----
+UPDATE tr_sppa SET status = '90', comment= 'HC Kronologis yang ditanda tangani oleh RT dan RW untuk validasi' WHERE regid = '211907000603'
+2020-11-18 10:57:06----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907000603', '90', 'ATKP013159', '2020-11-18 10:57:06', 'HC Kronologis yang ditanda tangani oleh RT dan RW untuk validasi')
+2020-11-18 10:57:56----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212001046317'
+2020-11-18 10:57:56----
+UPDATE tr_sppa SET status = '90', comment= 'HC Surat Kematian dari RS, ASLI FKA' WHERE regid = '212001046317'
+2020-11-18 10:57:56----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212001046317', '90', 'ATKP013159', '2020-11-18 10:57:56', 'HC Surat Kematian dari RS, ASLI FKA')
+2020-11-18 10:58:15----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212001046319'
+2020-11-18 10:58:15----
+UPDATE tr_sppa SET status = '90', comment= 'HC Surat Kematian dari RS, ASLI FKA' WHERE regid = '212001046319'
+2020-11-18 10:58:15----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212001046319', '90', 'ATKP013159', '2020-11-18 10:58:15', 'HC Surat Kematian dari RS, ASLI FKA')
+2020-11-18 10:58:59----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211910029483'
+2020-11-18 10:58:59----
+UPDATE tr_sppa SET status = '90', comment= 'HC Surat Keterangan Kematian yg dilegalisir' WHERE regid = '211910029483'
+2020-11-18 10:58:59----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211910029483', '90', 'ATKP013159', '2020-11-18 10:58:59', 'HC Surat Keterangan Kematian yg dilegalisir')
+2020-11-18 10:59:41----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211911032705'
+2020-11-18 10:59:41----
+UPDATE tr_sppa SET status = '90', comment= 'repayment schedulle, FC SK Pensiun atas Nasabah,' WHERE regid = '211911032705'
+2020-11-18 10:59:41----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211911032705', '90', 'ATKP013159', '2020-11-18 10:59:41', 'repayment schedulle, FC SK Pensiun atas Nasabah,')
+2020-11-18 11:01:25----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211912037941'
+2020-11-18 11:01:25----
+UPDATE tr_sppa SET status = '90', comment= 'KRONOLOGIS' WHERE regid = '211912037941'
+2020-11-18 11:01:25----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211912037941', '90', 'ATKP013159', '2020-11-18 11:01:25', 'KRONOLOGIS')
+2020-11-18 11:02:07----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211912041639'
+2020-11-18 11:02:07----
+UPDATE tr_sppa SET status = '90', comment= 'Surat keterangan perbedaan Periode pada pengajuan dan Perjanjian Kredit' WHERE regid = '211912041639'
+2020-11-18 11:02:07----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211912041639', '90', 'ATKP013159', '2020-11-18 11:02:07', 'Surat keterangan perbedaan Periode pada pengajuan dan Perjanjian Kredit')
+2020-11-18 11:05:45----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212002052381'
+2020-11-18 11:05:45----
+UPDATE tr_sppa SET status = '90', comment= 'Surat Perbedaan periode pada pengajuan dan Perjanjian Kredit' WHERE regid = '212002052381'
+2020-11-18 11:05:45----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212002052381', '90', 'ATKP013159', '2020-11-18 11:05:45', 'Surat Perbedaan periode pada pengajuan dan Perjanjian Kredit')
+2020-11-18 11:06:26----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212002052383'
+2020-11-18 11:06:26----
+UPDATE tr_sppa SET status = '90', comment= 'Surat Perbedaan periode pada pengajuan dan Perjanjian Kredit' WHERE regid = '212002052383'
+2020-11-18 11:06:26----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212002052383', '90', 'ATKP013159', '2020-11-18 11:06:26', 'Surat Perbedaan periode pada pengajuan dan Perjanjian Kredit')
+2020-11-18 11:07:19----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212002053443'
+2020-11-18 11:07:19----
+UPDATE tr_sppa SET status = '90', comment= 'Surat Perbedaan periode pada pengajuan dan Perjanjian Kredit, KK' WHERE regid = '212002053443'
+2020-11-18 11:07:19----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212002053443', '90', 'ATKP013159', '2020-11-18 11:07:19', 'Surat Perbedaan periode pada pengajuan dan Perjanjian Kredit, KK')
+2020-11-18 11:07:46----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212002053444'
+2020-11-18 11:07:46----
+UPDATE tr_sppa SET status = '90', comment= 'Surat Perbedaan periode pada pengajuan dan Perjanjian Kredit, KK' WHERE regid = '212002053444'
+2020-11-18 11:07:46----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212002053444', '90', 'ATKP013159', '2020-11-18 11:07:46', 'Surat Perbedaan periode pada pengajuan dan Perjanjian Kredit, KK')
+2020-11-18 11:09:08----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211912039376'
+2020-11-18 11:09:08----
+UPDATE tr_sppa SET status = '90', comment= 'Akta Kematian yang dilegalisir, Kronologis yang dittd oleh RT dan RW untuk validasi' WHERE regid = '211912039376'
+2020-11-18 11:09:08----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211912039376', '90', 'ATKP013159', '2020-11-18 11:09:08', 'Akta Kematian yang dilegalisir, Kronologis yang dittd oleh RT dan RW untuk validasi')
+2020-11-18 11:09:41----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212001044265'
+2020-11-18 11:09:41----
+UPDATE tr_sppa SET status = '90', comment= 'Kronologis yang dittd oleh RT dan RW untuk validasi' WHERE regid = '212001044265'
+2020-11-18 11:09:41----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212001044265', '90', 'ATKP013159', '2020-11-18 11:09:41', 'Kronologis yang dittd oleh RT dan RW untuk validasi')
+2020-11-18 11:09:56----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212001044268'
+2020-11-18 11:09:56----
+UPDATE tr_sppa SET status = '90', comment= 'Kronologis yang dittd oleh RT dan RW untuk validasi' WHERE regid = '212001044268'
+2020-11-18 11:09:56----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212001044268', '90', 'ATKP013159', '2020-11-18 11:09:56', 'Kronologis yang dittd oleh RT dan RW untuk validasi')
+2020-11-18 11:10:37----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211909017230'
+2020-11-18 11:10:37----
+UPDATE tr_sppa SET status = '90', comment= 'SURAT KET. PERBEDAAN NAMA KTP DENGAN NAMA KK BERBEDA' WHERE regid = '211909017230'
+2020-11-18 11:10:37----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211909017230', '90', 'ATKP013159', '2020-11-18 11:10:37', 'SURAT KET. PERBEDAAN NAMA KTP DENGAN NAMA KK BERBEDA')
+2020-11-18 11:10:53----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211909017227'
+2020-11-18 11:10:53----
+UPDATE tr_sppa SET status = '90', comment= 'SURAT KET. PERBEDAAN NAMA KTP DENGAN NAMA KK BERBEDA' WHERE regid = '211909017227'
+2020-11-18 11:10:54----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211909017227', '90', 'ATKP013159', '2020-11-18 11:10:53', 'SURAT KET. PERBEDAAN NAMA KTP DENGAN NAMA KK BERBEDA')
+2020-11-18 11:11:51----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211907006208'
+2020-11-18 11:11:51----
+UPDATE tr_sppa SET status = '90', comment= 'kronologis yang dibuat odan ditandatangani oleh Ahli Waris diatas materai dan dittd oleh RT dan RW untuk validasi' WHERE regid = '211907006208'
+2020-11-18 11:11:51----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907006208', '90', 'ATKP013159', '2020-11-18 11:11:51', 'kronologis yang dibuat odan ditandatangani oleh Ahli Waris diatas materai dan dittd oleh RT dan RW untuk validasi')
+2020-11-18 11:13:31----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211909016523'
+2020-11-18 11:13:31----
+UPDATE tr_sppa SET status = '90', comment= 'Kronologis yang ditanda tangani oleh RT dan RW untuk validasi' WHERE regid = '211909016523'
+2020-11-18 11:13:31----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211909016523', '90', 'ATKP013159', '2020-11-18 11:13:31', 'Kronologis yang ditanda tangani oleh RT dan RW untuk validasi')
+2020-11-18 11:13:46----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211909016532'
+2020-11-18 11:13:46----
+UPDATE tr_sppa SET status = '90', comment= 'Kronologis yang ditanda tangani oleh RT dan RW untuk validasi' WHERE regid = '211909016532'
+2020-11-18 11:13:46----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211909016532', '90', 'ATKP013159', '2020-11-18 11:13:46', 'Kronologis yang ditanda tangani oleh RT dan RW untuk validasi')
+2020-11-18 11:14:30----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908011765'
+2020-11-18 11:14:30----
+UPDATE tr_sppa SET status = '90', comment= 'Kronologis yang ditanda tangani oleh RT dan RW untuk validasi' WHERE regid = '211908011765'
+2020-11-18 11:14:30----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908011765', '90', 'ATKP013159', '2020-11-18 11:14:30', 'Kronologis yang ditanda tangani oleh RT dan RW untuk validasi')
+2020-11-18 11:14:45----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908011763'
+2020-11-18 11:14:45----
+UPDATE tr_sppa SET status = '90', comment= 'Kronologis yang ditanda tangani oleh RT dan RW untuk validasi' WHERE regid = '211908011763'
+2020-11-18 11:14:45----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908011763', '90', 'ATKP013159', '2020-11-18 11:14:45', 'Kronologis yang ditanda tangani oleh RT dan RW untuk validasi')
+2020-11-18 11:15:30----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211909022044'
+2020-11-18 11:15:30----
+UPDATE tr_sppa SET status = '90', comment= 'KRONOLOGIS' WHERE regid = '211909022044'
+2020-11-18 11:15:30----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211909022044', '90', 'ATKP013159', '2020-11-18 11:15:30', 'KRONOLOGIS')
+2020-11-18 11:16:08----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211907002261'
+2020-11-18 11:16:08----
+UPDATE tr_sppa SET status = '90', comment= 'Kronologis yang dibuat dan ditandatangani diatas materai oleh Ahli Waris dan ditandatangani oleh RT dan RW untuk validasi' WHERE regid = '211907002261'
+2020-11-18 11:16:08----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907002261', '90', 'ATKP013159', '2020-11-18 11:16:08', 'Kronologis yang dibuat dan ditandatangani diatas materai oleh Ahli Waris dan ditandatangani oleh RT dan RW untuk validasi')
+2020-11-18 11:16:25----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211907002265'
+2020-11-18 11:16:25----
+UPDATE tr_sppa SET status = '90', comment= 'Kronologis yang dibuat dan ditandatangani diatas materai oleh Ahli Waris dan ditandatangani oleh RT dan RW untuk validasi' WHERE regid = '211907002265'
+2020-11-18 11:16:25----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907002265', '90', 'ATKP013159', '2020-11-18 11:16:25', 'Kronologis yang dibuat dan ditandatangani diatas materai oleh Ahli Waris dan ditandatangani oleh RT dan RW untuk validasi')
+2020-11-18 11:17:21----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212004061352'
+2020-11-18 11:17:21----
+UPDATE tr_sppa SET status = '90', comment= 'Surat Perbedaan periode pada pengajuan dan Perjanjian Kredit' WHERE regid = '212004061352'
+2020-11-18 11:17:21----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212004061352', '90', 'ATKP013159', '2020-11-18 11:17:21', 'Surat Perbedaan periode pada pengajuan dan Perjanjian Kredit')
+2020-11-18 11:17:37----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212005064881'
+2020-11-18 11:17:37----
+UPDATE tr_sppa SET status = '90', comment= 'Surat Perbedaan periode pada pengajuan dan Perjanjian Kredit' WHERE regid = '212005064881'
+2020-11-18 11:17:37----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212005064881', '90', 'ATKP013159', '2020-11-18 11:17:37', 'Surat Perbedaan periode pada pengajuan dan Perjanjian Kredit')
+2020-11-18 11:22:10----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211910028646'
+2020-11-18 11:22:10----
+UPDATE tr_sppa SET status = '90', comment= 'Kronologis yang dibuat dan ditandatangani oleh Ahli Waris diatas materai dan dittd oleh RT dan RW untuk validasi (Peserta meninggal saat tiba di RS /tidak ada keterangan di Form Klaim)' WHERE regid = '211910028646'
+2020-11-18 11:22:10----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211910028646', '90', 'ATKP013159', '2020-11-18 11:22:10', 'Kronologis yang dibuat dan ditandatangani oleh Ahli Waris diatas materai dan dittd oleh RT dan RW untuk validasi (Peserta meninggal saat tiba di RS /tidak ada keterangan di Form Klaim)')
+2020-11-18 11:22:37----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211910028649'
+2020-11-18 11:22:37----
+UPDATE tr_sppa SET status = '90', comment= 'Kronologis yang dibuat dan ditandatangani oleh Ahli Waris diatas materai dan dittd oleh RT dan RW untuk validasi (Peserta meninggal saat tiba di RS /tidak ada keterangan di Form Klaim)' WHERE regid = '211910028649'
+2020-11-18 11:22:37----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211910028649', '90', 'ATKP013159', '2020-11-18 11:22:37', 'Kronologis yang dibuat dan ditandatangani oleh Ahli Waris diatas materai dan dittd oleh RT dan RW untuk validasi (Peserta meninggal saat tiba di RS /tidak ada keterangan di Form Klaim)')
+2020-11-18 11:23:42----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908010993'
+2020-11-18 11:23:42----
+UPDATE tr_sppa SET status = '90', comment= 'KRONOLOGIS, SA' WHERE regid = '211908010993'
+2020-11-18 11:23:42----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908010993', '90', 'ATKP013159', '2020-11-18 11:23:42', 'KRONOLOGIS, SA')
+2020-11-18 11:24:02----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908009966'
+2020-11-18 11:24:02----
+UPDATE tr_sppa SET status = '90', comment= 'KRONOLOGIS, SA' WHERE regid = '211908009966'
+2020-11-18 11:24:03----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908009966', '90', 'ATKP013159', '2020-11-18 11:24:02', 'KRONOLOGIS, SA')
+2020-11-22 08:52:29----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212003057830'
+2020-11-22 08:52:29----
+UPDATE tr_sppa SET status = '90', comment= 'KRONOLOGIS YANG LEBIH JELAS' WHERE regid = '212003057830'
+2020-11-22 08:52:29----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212003057830', '90', 'DHEA343454', '2020-11-22 20:52:29', 'KRONOLOGIS YANG LEBIH JELAS')
+2020-11-22 08:55:11----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212003058608'
+2020-11-22 08:55:11----
+UPDATE tr_sppa SET status = '90', comment= '1. KRONOLOGIS YANG LEBIH JELAS2. SURAT KETERANGAN PERBEDAAN TGL LAHIR ANTARA SERTIFIKAT DENGAN FORM PENGAJUAN KLAIM3. SURAT KETERANGAN PERBEDAAN NOMINAL TUNTUTAN KLAIM' WHERE regid = '212003058608'
+2020-11-22 08:55:11----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212003058608', '90', 'DHEA343454', '2020-11-22 20:55:11', '1. KRONOLOGIS YANG LEBIH JELAS2. SURAT KETERANGAN PERBEDAAN TGL LAHIR ANTARA SERTIFIKAT DENGAN FORM PENGAJUAN KLAIM3. SURAT KETERANGAN PERBEDAAN NOMINAL TUNTUTAN KLAIM')
+2020-11-30 11:32:25----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211907001206'
+2020-11-30 11:32:25----
+UPDATE tr_sppa SET status = '90', comment= 'Barcode akta kematian tidak terbaca, harap diupload ulang dan tidak ada nomor telepon ahli waris yang dapat dihubungi' WHERE regid = '211907001206'
+2020-11-30 11:32:25----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907001206', '90', 'INSSTAF', '2020-11-30 11:32:25', 'Barcode akta kematian tidak terbaca, harap diupload ulang dan tidak ada nomor telepon ahli waris yang dapat dihubungi')
+2020-12-01 08:32:09----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212004060470'
+2020-12-01 08:32:09----
+UPDATE tr_sppa SET status = '90', comment= 'Harap mengupload ASLI FORM SPPA (HASILCETAK WEB SIAP)ASLI KRONOLOGI KEMATIAN (TTD MATERAI AHLI WARIS DAN VALIDASI RT ' WHERE regid = '212004060470'
+2020-12-01 08:32:09----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212004060470', '90', 'BROKER3151', '2020-12-01 08:32:09', 'Harap mengupload ASLI FORM SPPA (HASILCETAK WEB SIAP)ASLI KRONOLOGI KEMATIAN (TTD MATERAI AHLI WARIS DAN VALIDASI RT ')
+2020-12-01 08:36:55----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212001044107'
+2020-12-01 08:36:55----
+UPDATE tr_sppa SET status = '90', comment= 'harap mengupload FOTOKOPI SAVING ACCT STATEMENT 3 BULAN TERAKHIR , Terimakasih' WHERE regid = '212001044107'
+2020-12-01 08:36:55----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212001044107', '90', 'BROKER3151', '2020-12-01 08:36:55', 'harap mengupload FOTOKOPI SAVING ACCT STATEMENT 3 BULAN TERAKHIR , Terimakasih')
+2020-12-01 08:37:34----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212001044109'
+2020-12-01 08:37:34----
+UPDATE tr_sppa SET status = '90', comment= 'harap menguplaod ASLI FORM SPPA (HASIL CETAK WEB SIAP) , Tks' WHERE regid = '212001044109'
+2020-12-01 08:37:34----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212001044109', '90', 'BROKER3151', '2020-12-01 08:37:34', 'harap menguplaod ASLI FORM SPPA (HASIL CETAK WEB SIAP) , Tks')
+2020-12-01 08:43:34----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212001048435'
+2020-12-01 08:43:34----
+UPDATE tr_sppa SET status = '90', comment= 'harap mengupload ASLI FORM SPPA (HASILCETAK WEB SIAP)FOTOKOPI KARTUKELUARGA, terimakasih' WHERE regid = '212001048435'
+2020-12-01 08:43:34----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212001048435', '90', 'BROKER3151', '2020-12-01 08:43:34', 'harap mengupload ASLI FORM SPPA (HASILCETAK WEB SIAP)FOTOKOPI KARTUKELUARGA, terimakasih')
+2020-12-01 08:43:57----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212001048436'
+2020-12-01 08:43:58----
+UPDATE tr_sppa SET status = '90', comment= 'harap mengupload ASLI FORM SPPA (HASILCETAK WEB SIAP)FOTOKOPI KARTUKELUARGA, terimakasih' WHERE regid = '212001048436'
+2020-12-01 08:43:58----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212001048436', '90', 'BROKER3151', '2020-12-01 08:43:57', 'harap mengupload ASLI FORM SPPA (HASILCETAK WEB SIAP)FOTOKOPI KARTUKELUARGA, terimakasih')
+2020-12-01 08:47:07----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908010115'
+2020-12-01 08:47:07----
+UPDATE tr_sppa SET status = '90', comment= 'harap mengupload dan mengirimkan ASLI KRONOLOGI KEMATIAN (TTD MATERAI AHLI WARIS DAN VALIDASI RT ' WHERE regid = '211908010115'
+2020-12-01 08:47:07----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908010115', '90', 'BROKER3151', '2020-12-01 08:47:07', 'harap mengupload dan mengirimkan ASLI KRONOLOGI KEMATIAN (TTD MATERAI AHLI WARIS DAN VALIDASI RT ')
+2020-12-01 08:47:29----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908010116'
+2020-12-01 08:47:29----
+UPDATE tr_sppa SET status = '90', comment= 'harap mengupload dan mengirimkan ASLI KRONOLOGI KEMATIAN (TTD MATERAI AHLI WARIS DAN VALIDASI RT ' WHERE regid = '211908010116'
+2020-12-01 08:47:29----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908010116', '90', 'BROKER3151', '2020-12-01 08:47:29', 'harap mengupload dan mengirimkan ASLI KRONOLOGI KEMATIAN (TTD MATERAI AHLI WARIS DAN VALIDASI RT ')
+2020-12-01 08:51:25----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908008671'
+2020-12-01 08:51:25----
+UPDATE tr_sppa SET status = '90', comment= 'harap mengupload dan mengirimkan berkas Surat Perbedaan Periode pada Perjanjian Kredit dan Pengajuan ke bds, Tks' WHERE regid = '211908008671'
+2020-12-01 08:51:25----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908008671', '90', 'BROKER3151', '2020-12-01 08:51:25', 'harap mengupload dan mengirimkan berkas Surat Perbedaan Periode pada Perjanjian Kredit dan Pengajuan ke bds, Tks')
+2020-12-01 08:51:49----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908008672'
+2020-12-01 08:51:49----
+UPDATE tr_sppa SET status = '90', comment= 'harap mengupload dan mengirimkan berkas Surat Perbedaan Periode pada Perjanjian Kredit dan Pengajuan ke bds, Tks' WHERE regid = '211908008672'
+2020-12-01 08:51:49----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908008672', '90', 'BROKER3151', '2020-12-01 08:51:49', 'harap mengupload dan mengirimkan berkas Surat Perbedaan Periode pada Perjanjian Kredit dan Pengajuan ke bds, Tks')
+2020-12-01 08:55:28----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211910028646'
+2020-12-01 08:55:28----
+UPDATE tr_sppa SET status = '90', comment= 'harap mengupload dan mengirimkan dokumen Kronologis yang dibuat dan ditandatangani oleh Ahli Waris diatas materai dan dittd oleh RT dan RW untuk validasi (Peserta meninggal saat tiba di RS /tidak ada keterangan di Form Klaim ke bds, Tks' WHERE regid = '211910028646'
+2020-12-01 08:55:28----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211910028646', '90', 'BROKER3151', '2020-12-01 08:55:28', 'harap mengupload dan mengirimkan dokumen Kronologis yang dibuat dan ditandatangani oleh Ahli Waris diatas materai dan dittd oleh RT dan RW untuk validasi (Peserta meninggal saat tiba di RS /tidak ada keterangan di Form Klaim ke bds, Tks')
+2020-12-01 08:55:58----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211910028649'
+2020-12-01 08:55:58----
+UPDATE tr_sppa SET status = '90', comment= 'harap mengupload dan mengirimkan dokumen Kronologis yang dibuat dan ditandatangani oleh Ahli Waris diatas materai dan dittd oleh RT dan RW untuk validasi (Peserta meninggal saat tiba di RS /tidak ada keterangan di Form Klaim)ke bds, Tks' WHERE regid = '211910028649'
+2020-12-01 08:55:58----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211910028649', '90', 'BROKER3151', '2020-12-01 08:55:58', 'harap mengupload dan mengirimkan dokumen Kronologis yang dibuat dan ditandatangani oleh Ahli Waris diatas materai dan dittd oleh RT dan RW untuk validasi (Peserta meninggal saat tiba di RS /tidak ada keterangan di Form Klaim)ke bds, Tks')
+2020-12-01 08:58:06----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211909018109'
+2020-12-01 08:58:06----
+UPDATE tr_sppa SET status = '90', comment= 'harap mengupload dan mengirimkan berkas ASLI KRONOLOGI KEMATIAN (TTD MATERAI AHLI WARIS DAN VALIDASI RT ' WHERE regid = '211909018109'
+2020-12-01 08:58:06----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211909018109', '90', 'BROKER3151', '2020-12-01 08:58:06', 'harap mengupload dan mengirimkan berkas ASLI KRONOLOGI KEMATIAN (TTD MATERAI AHLI WARIS DAN VALIDASI RT ')
+2020-12-01 09:01:28----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212001048238'
+2020-12-01 09:01:28----
+UPDATE tr_sppa SET status = '90', comment= 'harap mengupload dan mengirimkan berkas Surat Perbedaan periode pada pengajuan dan Perjanjian Kredit, Kronologis yang dittd oleh RT dan RW untuk validasi ke bds, Tks' WHERE regid = '212001048238'
+2020-12-01 09:01:28----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212001048238', '90', 'BROKER3151', '2020-12-01 09:01:28', 'harap mengupload dan mengirimkan berkas Surat Perbedaan periode pada pengajuan dan Perjanjian Kredit, Kronologis yang dittd oleh RT dan RW untuk validasi ke bds, Tks')
+2020-12-01 09:28:25----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211912042376'
+2020-12-01 09:28:25----
+UPDATE tr_sppa SET status = '90', comment= 'harap mengupload dan mengirimkan hard copy ASLI KRONOLOGI KEMATIAN (TTD MATERAI AHLI WARIS DAN VALIDASI RT ' WHERE regid = '211912042376'
+2020-12-01 09:28:25----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211912042376', '90', 'BROKER3151', '2020-12-01 09:28:25', 'harap mengupload dan mengirimkan hard copy ASLI KRONOLOGI KEMATIAN (TTD MATERAI AHLI WARIS DAN VALIDASI RT ')
+2020-12-01 09:29:11----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211912042378'
+2020-12-01 09:29:11----
+UPDATE tr_sppa SET status = '90', comment= 'harap mengupload dan mengirimkan hard copy ASLI KRONOLOGI KEMATIAN (TTD MATERAI AHLI WARIS DAN VALIDASI RT ' WHERE regid = '211912042378'
+2020-12-01 09:29:11----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211912042378', '90', 'BROKER3151', '2020-12-01 09:29:11', 'harap mengupload dan mengirimkan hard copy ASLI KRONOLOGI KEMATIAN (TTD MATERAI AHLI WARIS DAN VALIDASI RT ')
+2020-12-01 09:34:54----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908014203'
+2020-12-01 09:34:54----
+UPDATE tr_sppa SET status = '90', comment= 'harap mengupload dan mengirimkan kronologis yang dittd oleh RT dan RW untuk validasi ke bds, Tks' WHERE regid = '211908014203'
+2020-12-01 09:34:54----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908014203', '90', 'BROKER3151', '2020-12-01 09:34:54', 'harap mengupload dan mengirimkan kronologis yang dittd oleh RT dan RW untuk validasi ke bds, Tks')
+2020-12-01 09:35:06----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908014206'
+2020-12-01 09:35:06----
+UPDATE tr_sppa SET status = '90', comment= 'harap mengupload dan mengirimkan kronologis yang dittd oleh RT dan RW untuk validasi ke bds, Tks' WHERE regid = '211908014206'
+2020-12-01 09:35:06----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908014206', '90', 'BROKER3151', '2020-12-01 09:35:06', 'harap mengupload dan mengirimkan kronologis yang dittd oleh RT dan RW untuk validasi ke bds, Tks')
+2020-12-01 10:16:44----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212004063701'
+2020-12-01 10:16:44----
+UPDATE tr_sppa SET status = '90', comment= 'saving account 3 bulan terakhir' WHERE regid = '212004063701'
+2020-12-01 10:16:44----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212004063701', '90', 'ATKP013159', '2020-12-01 10:16:44', 'saving account 3 bulan terakhir')
+2020-12-01 10:16:55----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212004063703'
+2020-12-01 10:16:55----
+UPDATE tr_sppa SET status = '90', comment= 'saving account 3 bulan terakhir' WHERE regid = '212004063703'
+2020-12-01 10:16:55----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212004063703', '90', 'ATKP013159', '2020-12-01 10:16:55', 'saving account 3 bulan terakhir')
+2020-12-01 10:18:06----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211911031296'
+2020-12-01 10:18:06----
+UPDATE tr_sppa SET status = '90', comment= 'Mutasi Rekening bulan November 2019/Bukti Pencairan Kredit' WHERE regid = '211911031296'
+2020-12-01 10:18:06----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211911031296', '90', 'ATKP013159', '2020-12-01 10:18:06', 'Mutasi Rekening bulan November 2019/Bukti Pencairan Kredit')
+2020-12-01 10:18:55----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212003058584'
+2020-12-01 10:18:55----
+UPDATE tr_sppa SET status = '90', comment= 'kronologis yang dittd oleh RT dan RW untuk validasi' WHERE regid = '212003058584'
+2020-12-01 10:18:55----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212003058584', '90', 'ATKP013159', '2020-12-01 10:18:55', 'kronologis yang dittd oleh RT dan RW untuk validasi')
+2020-12-01 10:19:07----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212003058585'
+2020-12-01 10:19:07----
+UPDATE tr_sppa SET status = '90', comment= 'kronologis yang dittd oleh RT dan RW untuk validasi' WHERE regid = '212003058585'
+2020-12-01 10:19:07----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212003058585', '90', 'ATKP013159', '2020-12-01 10:19:06', 'kronologis yang dittd oleh RT dan RW untuk validasi')
+2020-12-01 10:20:39----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212002049502'
+2020-12-01 10:20:39----
+UPDATE tr_sppa SET status = '90', comment= 'Asli Form Klaim, Akta kematian yang dilegalisir oleh instansi berwenang, kronologis yang dibuat dan dittd oleh ahliwaris diatas materai dan dttd oleh RT dan RW untuk validasi' WHERE regid = '212002049502'
+2020-12-01 10:20:40----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212002049502', '90', 'ATKP013159', '2020-12-01 10:20:39', 'Asli Form Klaim, Akta kematian yang dilegalisir oleh instansi berwenang, kronologis yang dibuat dan dittd oleh ahliwaris diatas materai dan dttd oleh RT dan RW untuk validasi')
+2020-12-01 10:21:18----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212001044611'
+2020-12-01 10:21:18----
+UPDATE tr_sppa SET status = '90', comment= 'kronologis yang dittd oleh RT dan RW untuk validasi' WHERE regid = '212001044611'
+2020-12-01 10:21:18----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212001044611', '90', 'ATKP013159', '2020-12-01 10:21:18', 'kronologis yang dittd oleh RT dan RW untuk validasi')
+2020-12-01 10:21:28----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212001044614'
+2020-12-01 10:21:28----
+UPDATE tr_sppa SET status = '90', comment= 'kronologis yang dittd oleh RT dan RW untuk validasi' WHERE regid = '212001044614'
+2020-12-01 10:21:28----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212001044614', '90', 'ATKP013159', '2020-12-01 10:21:28', 'kronologis yang dittd oleh RT dan RW untuk validasi')
+2020-12-01 10:22:16----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908008228'
+2020-12-01 10:22:16----
+UPDATE tr_sppa SET status = '90', comment= 'Kronologis yang di ttd oleh RT dan RW untuk validasi' WHERE regid = '211908008228'
+2020-12-01 10:22:16----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908008228', '90', 'ATKP013159', '2020-12-01 10:22:16', 'Kronologis yang di ttd oleh RT dan RW untuk validasi')
+2020-12-01 10:22:27----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908008234'
+2020-12-01 10:22:28----
+UPDATE tr_sppa SET status = '90', comment= 'Kronologis yang di ttd oleh RT dan RW untuk validasi' WHERE regid = '211908008234'
+2020-12-01 10:22:28----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908008234', '90', 'ATKP013159', '2020-12-01 10:22:27', 'Kronologis yang di ttd oleh RT dan RW untuk validasi')
+2020-12-01 10:24:10----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212004062207'
+2020-12-01 10:24:10----
+UPDATE tr_sppa SET status = '90', comment= 'Surat Keterangan Kematian dr instansi berwenang,Surat Pernyataan Perbedaan Identitas dan Kronologis yang dibua dan ditandatangani oleh ahli waris diatas materai dan dittd oleh RT dan RW untuk validasi' WHERE regid = '212004062207'
+2020-12-01 10:24:10----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212004062207', '90', 'ATKP013159', '2020-12-01 10:24:10', 'Surat Keterangan Kematian dr instansi berwenang,Surat Pernyataan Perbedaan Identitas dan Kronologis yang dibua dan ditandatangani oleh ahli waris diatas materai dan dittd oleh RT dan RW untuk validasi')
+2020-12-01 10:24:20----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212004062204'
+2020-12-01 10:24:20----
+UPDATE tr_sppa SET status = '90', comment= 'Surat Keterangan Kematian dr instansi berwenang,Surat Pernyataan Perbedaan Identitas dan Kronologis yang dibua dan ditandatangani oleh ahli waris diatas materai dan dittd oleh RT dan RW untuk validasi' WHERE regid = '212004062204'
+2020-12-01 10:24:20----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212004062204', '90', 'ATKP013159', '2020-12-01 10:24:20', 'Surat Keterangan Kematian dr instansi berwenang,Surat Pernyataan Perbedaan Identitas dan Kronologis yang dibua dan ditandatangani oleh ahli waris diatas materai dan dittd oleh RT dan RW untuk validasi')
+2020-12-01 10:25:15----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908014284'
+2020-12-01 10:25:15----
+UPDATE tr_sppa SET status = '90', comment= 'Akta kematian yang dilegalisir, kronologis yang dittd oleh RT dan RW untuk validasi' WHERE regid = '211908014284'
+2020-12-01 10:25:15----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908014284', '90', 'ATKP013159', '2020-12-01 10:25:15', 'Akta kematian yang dilegalisir, kronologis yang dittd oleh RT dan RW untuk validasi')
+2020-12-01 10:25:26----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908014291'
+2020-12-01 10:25:26----
+UPDATE tr_sppa SET status = '90', comment= 'Akta kematian yang dilegalisir, kronologis yang dittd oleh RT dan RW untuk validasi' WHERE regid = '211908014291'
+2020-12-01 10:25:26----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908014291', '90', 'ATKP013159', '2020-12-01 10:25:26', 'Akta kematian yang dilegalisir, kronologis yang dittd oleh RT dan RW untuk validasi')
+2020-12-01 10:26:25----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212005065084'
+2020-12-01 10:26:25----
+UPDATE tr_sppa SET status = '90', comment= 'kronologis yang dibuat dan ditandatangani oleh ahli waris diatas materai dan dittd oleh RT dan RW untuk validasi' WHERE regid = '212005065084'
+2020-12-01 10:26:25----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212005065084', '90', 'ATKP013159', '2020-12-01 10:26:25', 'kronologis yang dibuat dan ditandatangani oleh ahli waris diatas materai dan dittd oleh RT dan RW untuk validasi')
+2020-12-01 10:26:36----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212005065083'
+2020-12-01 10:26:36----
+UPDATE tr_sppa SET status = '90', comment= 'kronologis yang dibuat dan ditandatangani oleh ahli waris diatas materai dan dittd oleh RT dan RW untuk validasi' WHERE regid = '212005065083'
+2020-12-01 10:26:36----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212005065083', '90', 'ATKP013159', '2020-12-01 10:26:36', 'kronologis yang dibuat dan ditandatangani oleh ahli waris diatas materai dan dittd oleh RT dan RW untuk validasi')
+2020-12-01 10:27:11----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211910028567'
+2020-12-01 10:27:11----
+UPDATE tr_sppa SET status = '90', comment= 'kronologis yang dittd oleh RT dan RW untuk validasi (masih dalam bentuk scan), Surat Perbedaan Periode antara Pengajuan dengan perjanjian kredit' WHERE regid = '211910028567'
+2020-12-01 10:27:11----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211910028567', '90', 'ATKP013159', '2020-12-01 10:27:11', 'kronologis yang dittd oleh RT dan RW untuk validasi (masih dalam bentuk scan), Surat Perbedaan Periode antara Pengajuan dengan perjanjian kredit')
+2020-12-01 10:27:22----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211910028573'
+2020-12-01 10:27:22----
+UPDATE tr_sppa SET status = '90', comment= 'kronologis yang dittd oleh RT dan RW untuk validasi (masih dalam bentuk scan), Surat Perbedaan Periode antara Pengajuan dengan perjanjian kredit' WHERE regid = '211910028573'
+2020-12-01 10:27:22----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211910028573', '90', 'ATKP013159', '2020-12-01 10:27:22', 'kronologis yang dittd oleh RT dan RW untuk validasi (masih dalam bentuk scan), Surat Perbedaan Periode antara Pengajuan dengan perjanjian kredit')
+2020-12-01 10:28:09----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212002052179'
+2020-12-01 10:28:09----
+UPDATE tr_sppa SET status = '90', comment= 'Surat Kematian dari Instansi Berwenang(adanya copy)' WHERE regid = '212002052179'
+2020-12-01 10:28:09----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212002052179', '90', 'ATKP013159', '2020-12-01 10:28:09', 'Surat Kematian dari Instansi Berwenang(adanya copy)')
+2020-12-01 10:28:20----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212002052180'
+2020-12-01 10:28:20----
+UPDATE tr_sppa SET status = '90', comment= 'Surat Kematian dari Instansi Berwenang(adanya copy)' WHERE regid = '212002052180'
+2020-12-01 10:28:20----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212002052180', '90', 'ATKP013159', '2020-12-01 10:28:20', 'Surat Kematian dari Instansi Berwenang(adanya copy)')
+2020-12-01 10:30:17----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908010834'
+2020-12-01 10:30:17----
+UPDATE tr_sppa SET status = '90', comment= 'ASLI SURAT KETERANGAN DOKTER / RESUME MEDIS' WHERE regid = '211908010834'
+2020-12-01 10:30:17----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908010834', '90', 'ATKP013159', '2020-12-01 10:30:17', 'ASLI SURAT KETERANGAN DOKTER / RESUME MEDIS')
+2020-12-01 10:30:27----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908010836'
+2020-12-01 10:30:27----
+UPDATE tr_sppa SET status = '90', comment= 'ASLI SURAT KETERANGAN DOKTER / RESUME MEDIS' WHERE regid = '211908010836'
+2020-12-01 10:30:27----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908010836', '90', 'ATKP013159', '2020-12-01 10:30:27', 'ASLI SURAT KETERANGAN DOKTER / RESUME MEDIS')
+2020-12-01 10:31:47----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212003054633'
+2020-12-01 10:31:47----
+UPDATE tr_sppa SET status = '90', comment= 'ASLI SURAT KETERANGAN DOKTER / RESUME MEDIS' WHERE regid = '212003054633'
+2020-12-01 10:31:47----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212003054633', '90', 'ATKP013159', '2020-12-01 10:31:47', 'ASLI SURAT KETERANGAN DOKTER / RESUME MEDIS')
+2020-12-01 10:32:16----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908014823'
+2020-12-01 10:32:16----
+UPDATE tr_sppa SET status = '90', comment= 'ASLI SURAT KETERANGAN DOKTER / RESUME MEDIS' WHERE regid = '211908014823'
+2020-12-01 10:32:16----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908014823', '90', 'ATKP013159', '2020-12-01 10:32:16', 'ASLI SURAT KETERANGAN DOKTER / RESUME MEDIS')
+2020-12-01 10:32:27----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908014844'
+2020-12-01 10:32:27----
+UPDATE tr_sppa SET status = '90', comment= 'ASLI SURAT KETERANGAN DOKTER / RESUME MEDIS' WHERE regid = '211908014844'
+2020-12-01 10:32:27----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908014844', '90', 'ATKP013159', '2020-12-01 10:32:27', 'ASLI SURAT KETERANGAN DOKTER / RESUME MEDIS')
+2020-12-01 10:33:12----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211911037144'
+2020-12-01 10:33:12----
+UPDATE tr_sppa SET status = '90', comment= 'kronologis yang dittd oleh RT dan RW untuk validasi, Surat Perbedaan Periode antara Pengajuan dengan perjanjian kredit' WHERE regid = '211911037144'
+2020-12-01 10:33:12----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211911037144', '90', 'ATKP013159', '2020-12-01 10:33:12', 'kronologis yang dittd oleh RT dan RW untuk validasi, Surat Perbedaan Periode antara Pengajuan dengan perjanjian kredit')
+2020-12-01 10:33:23----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211911037146'
+2020-12-01 10:33:23----
+UPDATE tr_sppa SET status = '90', comment= 'kronologis yang dittd oleh RT dan RW untuk validasi, Surat Perbedaan Periode antara Pengajuan dengan perjanjian kredit' WHERE regid = '211911037146'
+2020-12-01 10:33:23----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211911037146', '90', 'ATKP013159', '2020-12-01 10:33:23', 'kronologis yang dittd oleh RT dan RW untuk validasi, Surat Perbedaan Periode antara Pengajuan dengan perjanjian kredit')
+2020-12-01 11:35:00----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212001044829'
+2020-12-01 11:35:00----
+UPDATE tr_sppa SET status = '90', comment= 'mutasi rekening bulan April 2020' WHERE regid = '212001044829'
+2020-12-01 11:35:00----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212001044829', '90', 'ATKP013159', '2020-12-01 11:35:00', 'mutasi rekening bulan April 2020')
+2020-12-01 11:35:28----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908009222'
+2020-12-01 11:35:28----
+UPDATE tr_sppa SET status = '90', comment= 'Kronologis blm ada materai' WHERE regid = '211908009222'
+2020-12-01 11:35:28----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908009222', '90', 'ATKP013159', '2020-12-01 11:35:28', 'Kronologis blm ada materai')
+2020-12-01 11:35:58----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '212004063801'
+2020-12-01 11:35:58----
+UPDATE tr_sppa SET status = '90', comment= 'SK Pensiun atas Nasabah, Surat Keterangan Kesehatan, Bukti Pencairan Kredit' WHERE regid = '212004063801'
+2020-12-01 11:35:58----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('212004063801', '90', 'ATKP013159', '2020-12-01 11:35:58', 'SK Pensiun atas Nasabah, Surat Keterangan Kesehatan, Bukti Pencairan Kredit')
+2020-12-01 11:36:43----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211910030324'
+2020-12-01 11:36:43----
+UPDATE tr_sppa SET status = '90', comment= 'Form Klaim, Akta kematian belum dilegalisir, Kronologis yang dibuat dan ditanda tangani oleh Ahli waris diatas materai dan ditandatangani RT dan RW untuk validasi' WHERE regid = '211910030324'
+2020-12-01 11:36:43----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211910030324', '90', 'ATKP013159', '2020-12-01 11:36:43', 'Form Klaim, Akta kematian belum dilegalisir, Kronologis yang dibuat dan ditanda tangani oleh Ahli waris diatas materai dan ditandatangani RT dan RW untuk validasi')
+2020-12-01 11:36:59----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908011765'
+2020-12-01 11:36:59----
+UPDATE tr_sppa SET status = '90', comment= 'Kronologis yang ditanda tangani oleh RT dan RW untuk validasi' WHERE regid = '211908011765'
+2020-12-01 11:36:59----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908011765', '90', 'ATKP013159', '2020-12-01 11:36:59', 'Kronologis yang ditanda tangani oleh RT dan RW untuk validasi')
+2020-12-01 11:37:09----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211908011763'
+2020-12-01 11:37:09----
+UPDATE tr_sppa SET status = '90', comment= 'Kronologis yang ditanda tangani oleh RT dan RW untuk validasi' WHERE regid = '211908011763'
+2020-12-01 11:37:09----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211908011763', '90', 'ATKP013159', '2020-12-01 11:37:09', 'Kronologis yang ditanda tangani oleh RT dan RW untuk validasi')
+2020-12-01 11:38:02----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211907002261'
+2020-12-01 11:38:02----
+UPDATE tr_sppa SET status = '90', comment= 'Kronologis dittd oleh RT RW untuk validasi' WHERE regid = '211907002261'
+2020-12-01 11:38:02----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907002261', '90', 'ATKP013159', '2020-12-01 11:38:02', 'Kronologis dittd oleh RT RW untuk validasi')
+2020-12-01 11:38:12----
+UPDATE tr_claim SET statclaim = '90' WHERE regid = '211907002265'
+2020-12-01 11:38:12----
+UPDATE tr_sppa SET status = '90', comment= 'Kronologis dittd oleh RT RW untuk validasi' WHERE regid = '211907002265'
+2020-12-01 11:38:12----
+INSERT INTO tr_sppa_log (regid, status, createby, createdt, comment) VALUES ('211907002265', '90', 'ATKP013159', '2020-12-01 11:38:12', 'Kronologis dittd oleh RT RW untuk validasi')

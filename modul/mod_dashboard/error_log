@@ -1,0 +1,565 @@
+[25-Mar-2020 13:05:02 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 8
+[25-Mar-2020 13:05:02 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 8
+[25-Mar-2020 13:05:02 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 8
+[25-Mar-2020 13:05:02 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 13
+[25-Mar-2020 13:05:02 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 13
+[25-Mar-2020 13:05:02 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 13
+[25-Mar-2020 13:05:02 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 15
+[25-Mar-2020 13:05:02 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 21
+[25-Mar-2020 13:05:02 UTC] PHP Warning:  max(): When only one parameter is given, it must be an array in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 59
+[25-Mar-2020 13:05:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 61
+[25-Mar-2020 13:05:47 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 8
+[25-Mar-2020 13:05:47 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 8
+[25-Mar-2020 13:05:47 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 8
+[25-Mar-2020 13:05:47 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 13
+[25-Mar-2020 13:05:47 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 13
+[25-Mar-2020 13:05:47 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 13
+[25-Mar-2020 13:05:47 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 15
+[25-Mar-2020 13:05:47 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 21
+[25-Mar-2020 13:05:47 UTC] PHP Warning:  max(): When only one parameter is given, it must be an array in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 59
+[25-Mar-2020 13:05:47 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 61
+[25-Mar-2020 13:06:03 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 8
+[25-Mar-2020 13:06:03 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 8
+[25-Mar-2020 13:06:03 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 8
+[25-Mar-2020 13:06:03 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 13
+[25-Mar-2020 13:06:03 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 13
+[25-Mar-2020 13:06:03 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 13
+[25-Mar-2020 13:06:03 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 15
+[25-Mar-2020 13:06:03 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 21
+[25-Mar-2020 13:06:03 UTC] PHP Warning:  max(): When only one parameter is given, it must be an array in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 59
+[25-Mar-2020 13:06:03 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 61
+[25-Mar-2020 13:06:21 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 8
+[25-Mar-2020 13:06:21 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 8
+[25-Mar-2020 13:06:21 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 8
+[25-Mar-2020 13:06:21 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 13
+[25-Mar-2020 13:06:21 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 13
+[25-Mar-2020 13:06:21 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 13
+[25-Mar-2020 13:06:21 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 15
+[25-Mar-2020 13:06:21 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 21
+[25-Mar-2020 13:06:21 UTC] PHP Warning:  max(): When only one parameter is given, it must be an array in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 59
+[25-Mar-2020 13:06:21 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 61
+[25-Mar-2020 13:06:44 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 8
+[25-Mar-2020 13:06:44 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 8
+[25-Mar-2020 13:06:44 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 8
+[25-Mar-2020 13:06:44 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 13
+[25-Mar-2020 13:06:44 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 13
+[25-Mar-2020 13:06:44 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 13
+[25-Mar-2020 13:06:44 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 15
+[25-Mar-2020 13:06:44 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 21
+[25-Mar-2020 13:06:44 UTC] PHP Warning:  max(): When only one parameter is given, it must be an array in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 59
+[25-Mar-2020 13:06:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/pendapatan_cabang.php on line 61
+[05-Apr-2020 18:05:18 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 33
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 147
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 153
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 159
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 165
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 171
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 270
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 276
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 282
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 288
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 294
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 392
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 398
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 404
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 410
+[05-Apr-2020 18:05:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 416
+[05-Apr-2020 18:13:53 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 500
+[05-Apr-2020 18:20:44 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 9
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 34
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 148
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 154
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 160
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 166
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 172
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 271
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 277
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 283
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 289
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 295
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 393
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 399
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 405
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 411
+[05-Apr-2020 18:20:44 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 417
+[05-Apr-2020 18:21:46 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 9
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 34
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 148
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 154
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 160
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 166
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 172
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 271
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 277
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 283
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 289
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 295
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 393
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 399
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 405
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 411
+[05-Apr-2020 18:21:46 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 417
+[05-Apr-2020 18:28:40 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 9
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 34
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 148
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 154
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 160
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 166
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 172
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 271
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 277
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 283
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 289
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 295
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 393
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 399
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 405
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 411
+[05-Apr-2020 18:28:40 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 417
+[05-Apr-2020 18:29:20 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 9
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 34
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 148
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 154
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 160
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 166
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 172
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 271
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 277
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 283
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 289
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 295
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 393
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 399
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 405
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 411
+[05-Apr-2020 18:29:20 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 417
+[05-Apr-2020 18:29:52 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 10
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 35
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 149
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 155
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 161
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 167
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 173
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 272
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 278
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 284
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 290
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 296
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 394
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 400
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 406
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 412
+[05-Apr-2020 18:29:52 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 418
+[05-Apr-2020 18:30:28 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 10
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 35
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 149
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 155
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 161
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 167
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 173
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 272
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 278
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 284
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 290
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 296
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 394
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 400
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 406
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 412
+[05-Apr-2020 18:30:28 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 418
+[05-Apr-2020 18:30:54 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 10
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 35
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 149
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 155
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 161
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 167
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 173
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 272
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 278
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 284
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 290
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 296
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 394
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 400
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 406
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 412
+[05-Apr-2020 18:30:54 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 418
+[05-Apr-2020 18:31:07 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 10
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 35
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 149
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 155
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 161
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 167
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 173
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 272
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 278
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 284
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 290
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 296
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 394
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 400
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 406
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 412
+[05-Apr-2020 18:31:07 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 418
+[05-Apr-2020 18:31:27 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 9
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 34
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 148
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 154
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 160
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 166
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 172
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 271
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 277
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 283
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 289
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 295
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 393
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 399
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 405
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 411
+[05-Apr-2020 18:31:27 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 417
+[05-Apr-2020 18:33:59 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 9
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 34
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 148
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 154
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 160
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 166
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 172
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 271
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 277
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 283
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 289
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 295
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 393
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 399
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 405
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 411
+[05-Apr-2020 18:33:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 417
+[05-Apr-2020 18:37:58 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:37:58 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:37:58 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:37:58 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:37:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 33
+[05-Apr-2020 18:41:59 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:41:59 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:41:59 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:41:59 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:41:59 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 33
+[05-Apr-2020 18:42:13 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:42:13 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:42:13 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:42:13 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:42:13 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 33
+[05-Apr-2020 18:43:21 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:43:21 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:43:21 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:43:21 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:43:21 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 33
+[05-Apr-2020 18:43:31 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:43:31 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:43:31 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:43:31 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:43:31 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 33
+[05-Apr-2020 18:43:34 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:43:34 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:43:34 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:43:34 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:43:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 33
+[05-Apr-2020 18:44:34 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:44:34 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:44:34 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:44:34 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:44:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 33
+[05-Apr-2020 18:47:30 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:47:30 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:47:30 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:47:30 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:47:30 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 12
+[05-Apr-2020 18:47:34 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:47:34 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:47:34 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:47:34 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:47:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 12
+[05-Apr-2020 18:48:22 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:48:22 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:48:22 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:48:22 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:48:22 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 12
+[05-Apr-2020 18:49:38 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:49:38 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:49:38 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:49:38 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:49:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 12
+[05-Apr-2020 18:49:53 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:49:53 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:49:53 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:49:53 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:49:53 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 12
+[05-Apr-2020 18:52:28 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:52:28 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:52:28 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:52:28 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:52:28 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 12
+[05-Apr-2020 18:53:13 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:53:13 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:53:13 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 6
+[05-Apr-2020 18:53:13 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 8
+[05-Apr-2020 18:53:13 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 12
+[05-Apr-2020 18:56:51 UTC] PHP Warning:  include(././config/koneksi.php): failed to open stream: No such file or directory in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 2
+[05-Apr-2020 18:56:51 UTC] PHP Warning:  include(): Failed opening '././config/koneksi.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 2
+[05-Apr-2020 18:56:51 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:56:51 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:56:51 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:56:51 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 9
+[05-Apr-2020 18:56:51 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 13
+[05-Apr-2020 18:57:00 UTC] PHP Warning:  include(././config/koneksi.php): failed to open stream: No such file or directory in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 2
+[05-Apr-2020 18:57:00 UTC] PHP Warning:  include(): Failed opening '././config/koneksi.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 2
+[05-Apr-2020 18:57:00 UTC] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:57:00 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:57:00 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 7
+[05-Apr-2020 18:57:00 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 9
+[05-Apr-2020 18:57:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 13
+[05-Apr-2020 19:57:41 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 276
+[05-Apr-2020 19:57:41 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 282
+[05-Apr-2020 19:57:41 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 288
+[05-Apr-2020 19:57:41 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 294
+[05-Apr-2020 19:57:41 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 300
+[05-Apr-2020 19:57:41 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 398
+[05-Apr-2020 19:57:41 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 404
+[05-Apr-2020 19:57:41 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 410
+[05-Apr-2020 19:57:41 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 416
+[05-Apr-2020 19:57:41 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 422
+[05-Apr-2020 20:01:48 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 276
+[05-Apr-2020 20:01:48 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 282
+[05-Apr-2020 20:01:48 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 288
+[05-Apr-2020 20:01:48 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 294
+[05-Apr-2020 20:01:48 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 300
+[05-Apr-2020 20:01:48 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 398
+[05-Apr-2020 20:01:48 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 404
+[05-Apr-2020 20:01:48 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 410
+[05-Apr-2020 20:01:48 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 416
+[05-Apr-2020 20:01:48 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 422
+[05-Apr-2020 20:02:19 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 277
+[05-Apr-2020 20:02:19 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 283
+[05-Apr-2020 20:02:19 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 289
+[05-Apr-2020 20:02:19 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 295
+[05-Apr-2020 20:02:19 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 301
+[05-Apr-2020 20:02:19 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 399
+[05-Apr-2020 20:02:19 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 405
+[05-Apr-2020 20:02:19 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 411
+[05-Apr-2020 20:02:19 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 417
+[05-Apr-2020 20:02:19 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 423
+[06-Apr-2020 07:29:24 UTC] PHP Warning:  array_sum() expects parameter 1 to be array, null given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 576
+[06-Apr-2020 07:29:24 UTC] PHP Warning:  max(): When only one parameter is given, it must be an array in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 583
+[06-Apr-2020 07:29:24 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 585
+[06-Apr-2020 07:29:40 UTC] PHP Warning:  array_sum() expects parameter 1 to be array, null given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 576
+[06-Apr-2020 07:29:40 UTC] PHP Warning:  max(): When only one parameter is given, it must be an array in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 583
+[06-Apr-2020 07:29:40 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 585
+[06-Apr-2020 07:29:50 UTC] PHP Warning:  array_sum() expects parameter 1 to be array, null given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 576
+[06-Apr-2020 07:29:50 UTC] PHP Warning:  max(): When only one parameter is given, it must be an array in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 583
+[06-Apr-2020 07:29:50 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 585
+[06-Apr-2020 07:30:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 278
+[06-Apr-2020 07:30:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 284
+[06-Apr-2020 07:30:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 290
+[06-Apr-2020 07:30:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 296
+[06-Apr-2020 07:30:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 302
+[06-Apr-2020 07:30:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 400
+[06-Apr-2020 07:30:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 406
+[06-Apr-2020 07:30:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 412
+[06-Apr-2020 07:30:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 418
+[06-Apr-2020 07:30:18 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 424
+[06-Apr-2020 07:58:15 UTC] PHP Warning:  array_sum() expects parameter 1 to be array, null given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 576
+[06-Apr-2020 07:58:15 UTC] PHP Warning:  max(): When only one parameter is given, it must be an array in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 583
+[06-Apr-2020 07:58:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 585
+[06-Apr-2020 08:33:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 279
+[06-Apr-2020 08:33:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 285
+[06-Apr-2020 08:33:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 291
+[06-Apr-2020 08:33:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 297
+[06-Apr-2020 08:33:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 303
+[06-Apr-2020 08:33:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 401
+[06-Apr-2020 08:33:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 407
+[06-Apr-2020 08:33:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 413
+[06-Apr-2020 08:33:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 419
+[06-Apr-2020 08:33:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 425
+[06-Apr-2020 18:02:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 279
+[06-Apr-2020 18:02:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 285
+[06-Apr-2020 18:02:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 291
+[06-Apr-2020 18:02:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 297
+[06-Apr-2020 18:02:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 303
+[06-Apr-2020 18:02:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 401
+[06-Apr-2020 18:02:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 407
+[06-Apr-2020 18:02:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 413
+[06-Apr-2020 18:02:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 419
+[06-Apr-2020 18:02:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 425
+[06-Apr-2020 18:02:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 279
+[06-Apr-2020 18:02:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 285
+[06-Apr-2020 18:02:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 291
+[06-Apr-2020 18:02:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 297
+[06-Apr-2020 18:02:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 303
+[06-Apr-2020 18:02:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 401
+[06-Apr-2020 18:02:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 407
+[06-Apr-2020 18:02:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 413
+[06-Apr-2020 18:02:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 419
+[06-Apr-2020 18:02:59 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 425
+[07-Apr-2020 08:51:32 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 279
+[07-Apr-2020 08:51:32 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 285
+[07-Apr-2020 08:51:32 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 291
+[07-Apr-2020 08:51:32 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 297
+[07-Apr-2020 08:51:32 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 303
+[07-Apr-2020 08:51:32 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 401
+[07-Apr-2020 08:51:32 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 407
+[07-Apr-2020 08:51:32 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 413
+[07-Apr-2020 08:51:32 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 419
+[07-Apr-2020 08:51:32 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 425
+[09-Apr-2020 19:43:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 156
+[09-Apr-2020 19:43:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 162
+[09-Apr-2020 19:43:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 168
+[09-Apr-2020 19:43:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 174
+[09-Apr-2020 19:43:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 180
+[09-Apr-2020 19:43:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 279
+[09-Apr-2020 19:43:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 285
+[09-Apr-2020 19:43:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 291
+[09-Apr-2020 19:43:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 297
+[09-Apr-2020 19:43:37 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 303
+[09-Apr-2020 20:14:22 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 156
+[09-Apr-2020 20:14:22 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 162
+[09-Apr-2020 20:14:22 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 168
+[09-Apr-2020 20:14:22 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 174
+[09-Apr-2020 20:14:22 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 180
+[09-Apr-2020 20:14:22 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 279
+[09-Apr-2020 20:14:22 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 285
+[09-Apr-2020 20:14:22 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 291
+[09-Apr-2020 20:14:22 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 297
+[09-Apr-2020 20:14:22 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 303
+[09-Apr-2020 20:15:15 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 156
+[09-Apr-2020 20:15:15 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 162
+[09-Apr-2020 20:15:15 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 168
+[09-Apr-2020 20:15:15 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 174
+[09-Apr-2020 20:15:15 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 180
+[09-Apr-2020 20:15:15 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 279
+[09-Apr-2020 20:15:15 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 285
+[09-Apr-2020 20:15:15 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 291
+[09-Apr-2020 20:15:15 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 297
+[09-Apr-2020 20:15:15 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 303
+[09-Apr-2020 20:15:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 156
+[09-Apr-2020 20:15:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 162
+[09-Apr-2020 20:15:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 168
+[09-Apr-2020 20:15:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 174
+[09-Apr-2020 20:15:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 180
+[09-Apr-2020 20:15:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 279
+[09-Apr-2020 20:15:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 285
+[09-Apr-2020 20:15:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 291
+[09-Apr-2020 20:15:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 297
+[09-Apr-2020 20:15:31 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 303
+[20-Apr-2020 04:25:25 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 04:25:58 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 04:26:13 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 04:26:16 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 04:33:58 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 04:34:40 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 05:02:07 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 05:02:22 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 05:02:23 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 05:02:29 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 05:02:31 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 05:04:39 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 05:05:01 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 05:05:14 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 05:05:15 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 05:05:17 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 05:05:22 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 05:05:31 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 05:05:34 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 05:05:40 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 05:06:00 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[20-Apr-2020 05:34:38 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 02:49:21 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 06:36:30 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 06:37:05 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 06:37:56 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 06:39:53 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 06:41:12 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 06:42:00 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 06:42:53 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 06:43:19 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 06:43:53 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 06:43:58 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 06:44:06 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 06:46:12 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 06:46:19 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 07:17:13 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 08:34:13 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 08:35:48 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 21:36:56 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[22-Apr-2020 21:37:09 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 156
+[22-Apr-2020 21:37:10 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 162
+[22-Apr-2020 21:37:10 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 168
+[22-Apr-2020 21:37:10 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 174
+[22-Apr-2020 21:37:10 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 180
+[22-Apr-2020 21:37:10 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 279
+[22-Apr-2020 21:37:10 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 285
+[22-Apr-2020 21:37:10 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 291
+[22-Apr-2020 21:37:10 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 297
+[22-Apr-2020 21:37:10 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 303
+[24-Apr-2020 17:36:10 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 42
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 156
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 162
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 168
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 174
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 180
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 279
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 285
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 291
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 297
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 303
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 401
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 407
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 413
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 419
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  Division by zero in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 425
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  array_sum() expects parameter 1 to be array, null given in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 577
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  max(): When only one parameter is given, it must be an array in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 584
+[24-Apr-2020 17:36:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/siapdev/public_html/beta/modul/mod_dashboard/chart_filter.php on line 586
+[26-Apr-2020 19:27:09 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[26-Apr-2020 19:56:02 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[26-Apr-2020 20:24:14 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[26-Apr-2020 20:24:40 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[26-Apr-2020 20:24:41 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[26-Apr-2020 20:24:53 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[26-Apr-2020 20:24:54 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28
+[26-Apr-2020 20:24:54 UTC] PHP Deprecated:  mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/beta/modul/mod_dashboard/data_dashboard.php on line 28

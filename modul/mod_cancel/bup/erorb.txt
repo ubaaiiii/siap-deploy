@@ -1,0 +1,247 @@
+INSERT INTO tr_billing
+                                (billno,
+                                 billdt,
+                                 duedt,
+                                 policyno,
+                                 reffno,
+                                 grossamt,
+                                 nettamt,
+                                 admamt,
+                                 discamt,
+                                 totalamt,
+                                 remark,
+                                 billtype)
+                    SELECT Concat(aa.prevno, Date_format(Now(), aa.formdt), aa.billno) sbillno,
+                          Now(),
+                          Date_add(Now(), interval 15 day),
+                          bb.policyno,
+                          regid                                                       endorsno,
+                          gpremi,
+                          gpremi,
+                          0,
+                          0,
+                          gpremi,
+                          Concat('Refund Premi ; tanggal batal ', bb.tglbatal),
+                          1
+                    FROM   (SELECT a.prevno,
+                                  Concat(Right(Concat(a.formseqno, b.lastno), formseqlen)) billno,
+                                  formdt
+                            FROM   tbl_lastno_form a
+                                  inner join tbl_lastno_trans b
+                                          ON a.trxid = b.trxid
+                            WHERE  a.trxid = 'billpre') aa,
+                          (SELECT a.regid,
+                                  b.policyno,
+                                  SUM(a.refund) *- 1 gpremi,
+                                  a.tglbatal
+                            FROM   tr_sppa_cancel a
+                                  inner join tr_sppa b
+                                          ON a.regid = b.regid
+                            WHERE  a.regid = '212006067239'
+                            GROUP  BY b.policyno,
+                                      a.regid) bb  INSERT INTO tr_billing
+                                (billno,
+                                 billdt,
+                                 duedt,
+                                 policyno,
+                                 reffno,
+                                 grossamt,
+                                 nettamt,
+                                 admamt,
+                                 discamt,
+                                 totalamt,
+                                 remark,
+                                 billtype)
+                    SELECT Concat(aa.prevno, Date_format(Now(), aa.formdt), aa.billno) sbillno,
+                          Now(),
+                          Date_add(Now(), interval 15 day),
+                          bb.policyno,
+                          regid                                                       endorsno,
+                          gpremi,
+                          gpremi,
+                          0,
+                          0,
+                          gpremi,
+                          Concat('Refund Premi ; tanggal batal ', bb.tglbatal),
+                          1
+                    FROM   (SELECT a.prevno,
+                                  Concat(Right(Concat(a.formseqno, b.lastno), formseqlen)) billno,
+                                  formdt
+                            FROM   tbl_lastno_form a
+                                  inner join tbl_lastno_trans b
+                                          ON a.trxid = b.trxid
+                            WHERE  a.trxid = 'billpre') aa,
+                          (SELECT a.regid,
+                                  b.policyno,
+                                  SUM(a.refund) *- 1 gpremi,
+                                  a.tglbatal
+                            FROM   tr_sppa_cancel a
+                                  inner join tr_sppa b
+                                          ON a.regid = b.regid
+                            WHERE  a.regid = '212006067240'
+                            GROUP  BY b.policyno,
+                                      a.regid) bb  INSERT INTO tr_billing
+                                (billno,
+                                 billdt,
+                                 duedt,
+                                 policyno,
+                                 reffno,
+                                 grossamt,
+                                 nettamt,
+                                 admamt,
+                                 discamt,
+                                 totalamt,
+                                 remark,
+                                 billtype)
+                    SELECT Concat(aa.prevno, Date_format(Now(), aa.formdt), aa.billno) sbillno,
+                          Now(),
+                          Date_add(Now(), interval 15 day),
+                          bb.policyno,
+                          regid                                                       endorsno,
+                          gpremi,
+                          gpremi,
+                          0,
+                          0,
+                          gpremi,
+                          Concat('Refund Premi ; tanggal batal ', bb.tglbatal),
+                          1
+                    FROM   (SELECT a.prevno,
+                                  Concat(Right(Concat(a.formseqno, b.lastno), formseqlen)) billno,
+                                  formdt
+                            FROM   tbl_lastno_form a
+                                  inner join tbl_lastno_trans b
+                                          ON a.trxid = b.trxid
+                            WHERE  a.trxid = 'billpre') aa,
+                          (SELECT a.regid,
+                                  b.policyno,
+                                  SUM(a.refund) *- 1 gpremi,
+                                  a.tglbatal
+                            FROM   tr_sppa_cancel a
+                                  inner join tr_sppa b
+                                          ON a.regid = b.regid
+                            WHERE  a.regid = '211910026972'
+                            GROUP  BY b.policyno,
+                                      a.regid) bb  INSERT INTO tr_billing
+                                (billno,
+                                 billdt,
+                                 duedt,
+                                 policyno,
+                                 reffno,
+                                 grossamt,
+                                 nettamt,
+                                 admamt,
+                                 discamt,
+                                 totalamt,
+                                 remark,
+                                 billtype)
+                    SELECT Concat(aa.prevno, Date_format(Now(), aa.formdt), aa.billno) sbillno,
+                          Now(),
+                          Date_add(Now(), interval 15 day),
+                          bb.policyno,
+                          regid                                                       endorsno,
+                          gpremi,
+                          gpremi,
+                          0,
+                          0,
+                          gpremi,
+                          Concat('Refund Premi ; tanggal batal ', bb.tglbatal),
+                          1
+                    FROM   (SELECT a.prevno,
+                                  Concat(Right(Concat(a.formseqno, b.lastno), formseqlen)) billno,
+                                  formdt
+                            FROM   tbl_lastno_form a
+                                  inner join tbl_lastno_trans b
+                                          ON a.trxid = b.trxid
+                            WHERE  a.trxid = 'billpre') aa,
+                          (SELECT a.regid,
+                                  b.policyno,
+                                  SUM(a.refund) *- 1 gpremi,
+                                  a.tglbatal
+                            FROM   tr_sppa_cancel a
+                                  inner join tr_sppa b
+                                          ON a.regid = b.regid
+                            WHERE  a.regid = '212001045724'
+                            GROUP  BY b.policyno,
+                                      a.regid) bb  INSERT INTO tr_billing
+                                (billno,
+                                 billdt,
+                                 duedt,
+                                 policyno,
+                                 reffno,
+                                 grossamt,
+                                 nettamt,
+                                 admamt,
+                                 discamt,
+                                 totalamt,
+                                 remark,
+                                 billtype)
+                    SELECT Concat(aa.prevno, Date_format(Now(), aa.formdt), aa.billno) sbillno,
+                          Now(),
+                          Date_add(Now(), interval 15 day),
+                          bb.policyno,
+                          regid                                                       endorsno,
+                          gpremi,
+                          gpremi,
+                          0,
+                          0,
+                          gpremi,
+                          Concat('Refund Premi ; tanggal batal ', bb.tglbatal),
+                          1
+                    FROM   (SELECT a.prevno,
+                                  Concat(Right(Concat(a.formseqno, b.lastno), formseqlen)) billno,
+                                  formdt
+                            FROM   tbl_lastno_form a
+                                  inner join tbl_lastno_trans b
+                                          ON a.trxid = b.trxid
+                            WHERE  a.trxid = 'billpre') aa,
+                          (SELECT a.regid,
+                                  b.policyno,
+                                  SUM(a.refund) *- 1 gpremi,
+                                  a.tglbatal
+                            FROM   tr_sppa_cancel a
+                                  inner join tr_sppa b
+                                          ON a.regid = b.regid
+                            WHERE  a.regid = '211910024845'
+                            GROUP  BY b.policyno,
+                                      a.regid) bb  INSERT INTO tr_billing
+                                (billno,
+                                 billdt,
+                                 duedt,
+                                 policyno,
+                                 reffno,
+                                 grossamt,
+                                 nettamt,
+                                 admamt,
+                                 discamt,
+                                 totalamt,
+                                 remark,
+                                 billtype)
+                    SELECT Concat(aa.prevno, Date_format(Now(), aa.formdt), aa.billno) sbillno,
+                          Now(),
+                          Date_add(Now(), interval 15 day),
+                          bb.policyno,
+                          regid                                                       endorsno,
+                          gpremi,
+                          gpremi,
+                          0,
+                          0,
+                          gpremi,
+                          Concat('Refund Premi ; tanggal batal ', bb.tglbatal),
+                          1
+                    FROM   (SELECT a.prevno,
+                                  Concat(Right(Concat(a.formseqno, b.lastno), formseqlen)) billno,
+                                  formdt
+                            FROM   tbl_lastno_form a
+                                  inner join tbl_lastno_trans b
+                                          ON a.trxid = b.trxid
+                            WHERE  a.trxid = 'billpre') aa,
+                          (SELECT a.regid,
+                                  b.policyno,
+                                  SUM(a.refund) *- 1 gpremi,
+                                  a.tglbatal
+                            FROM   tr_sppa_cancel a
+                                  inner join tr_sppa b
+                                          ON a.regid = b.regid
+                            WHERE  a.regid = '211912038660'
+                            GROUP  BY b.policyno,
+                                      a.regid) bb  

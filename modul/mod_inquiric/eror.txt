@@ -1,0 +1,1 @@
+select  rates,ratesother,tunggakan,bunga   from  tr_rates   where produk='' and jkel='' and '2019' between umurb and umura and insperiodmm=''select  rates,ratesother,tunggakan,bunga   from  tr_rates   where produk='' and jkel='' and '2019' between umurb and umura and insperiodmm=''

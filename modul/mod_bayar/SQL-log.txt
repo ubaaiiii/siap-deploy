@@ -1,0 +1,32 @@
+[2021-02-08 10:37:46] ---- 212101068979
+	INSERT INTO tr_sppa_paid(paidid, regid, paiddt, paidamt, createdt, createby,paidtype) SELECT '252102530777', regid, '2021-02-02', premi, '2021-02-08 10:37:46', 'BRONIS3172', 'PREMI' FROM tr_sppa WHERE regid='212101068979'
+[2021-02-08 10:37:46] ---- 212101068979
+	INSERT INTO tr_sppa_log (regid, status, createdt, createby, comment) SELECT regid, '20', '2021-02-08 10:37:46', 'BRONIS3172', 'Pembayaran Premi' FROM tr_sppa WHERE regid='212101068979'
+[2021-02-08 10:37:46] ---- 212101068979
+	UPDATE tr_sppa SET status = '20' WHERE regid='212101068979'
+[2021-02-08 10:38:34] ---- 212101068982
+	INSERT INTO tr_sppa_paid(paidid, regid, paiddt, paidamt, createdt, createby,paidtype) SELECT '252102530778', regid, '2021-02-02', premi, '2021-02-08 10:38:34', 'BRONIS3172', 'PREMI' FROM tr_sppa WHERE regid='212101068982'
+[2021-02-08 10:38:34] ---- 212101068982
+	INSERT INTO tr_sppa_log (regid, status, createdt, createby, comment) SELECT regid, '20', '2021-02-08 10:38:34', 'BRONIS3172', 'Pembayaran Premi' FROM tr_sppa WHERE regid='212101068982'
+[2021-02-08 10:38:34] ---- 212101068982
+	UPDATE tr_sppa SET status = '20' WHERE regid='212101068982'
+[2021-02-08 10:39:09] ---- 212101068984
+	INSERT INTO tr_sppa_paid(paidid, regid, paiddt, paidamt, createdt, createby,paidtype) SELECT '252102530779', regid, '2021-02-02', premi, '2021-02-08 10:39:09', 'BRONIS3172', 'PREMI' FROM tr_sppa WHERE regid='212101068984'
+[2021-02-08 10:39:09] ---- 212101068984
+	INSERT INTO tr_sppa_log (regid, status, createdt, createby, comment) SELECT regid, '20', '2021-02-08 10:39:09', 'BRONIS3172', 'Pembayaran Premi' FROM tr_sppa WHERE regid='212101068984'
+[2021-02-08 10:39:09] ---- 212101068984
+	UPDATE tr_sppa SET status = '20' WHERE regid='212101068984'
+[2021-02-08 10:41:05] ---- 212101069053
+	INSERT INTO tr_sppa_paid(paidid, regid, paiddt, paidamt, createdt, createby,paidtype) SELECT '252102530780', regid, '2021-02-02', premi, '2021-02-08 10:41:05', 'BRONIS3172', 'PREMI' FROM tr_sppa WHERE regid='212101069053'
+[2021-02-08 10:41:05] ---- 212101069053
+	INSERT INTO tr_sppa_log (regid, status, createdt, createby, comment) SELECT regid, '20', '2021-02-08 10:41:05', 'BRONIS3172', 'Pembayaran Premi' FROM tr_sppa WHERE regid='212101069053'
+[2021-02-08 10:41:05] ---- 212101069053
+	UPDATE tr_sppa SET status = '20' WHERE regid='212101069053'
+[2021-02-09 05:24:28] ---- 212004063608
+	INSERT INTO tr_sppa_paid(paidid, regid, paiddt, paidamt, createdt, createby,paidtype) SELECT '252102530787', a.regid, '2021-02-03', '176580472', '2021-02-09 17:24:28', 'AMPM3178', 'CLAIM' FROM tr_sppa a INNER JOIN tr_claim b ON b.regid = a.regid WHERE a.regid='212004063608'
+[2021-02-09 05:24:28] ---- 212004063608
+	INSERT INTO tr_sppa_log (regid, status, createdt, createby, comment) SELECT regid, '95', '2021-02-09 17:24:28', 'AMPM3178', 'Pembayaran Claim' FROM tr_sppa WHERE regid='212004063608'
+[2021-02-09 05:24:28] ---- 212004063608
+	UPDATE tr_sppa SET status = '95' WHERE regid='212004063608'
+[2021-02-09 05:24:28] ---- 212004063608
+	UPDATE tr_claim SET statclaim = '95' WHERE regid='212004063608'

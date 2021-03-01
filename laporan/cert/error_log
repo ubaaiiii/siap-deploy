@@ -1,0 +1,9 @@
+[18-Feb-2021 13:38:03 Asia/Jakarta] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/deploy/laporan/cert/cert.php on line 171
+[18-Feb-2021 13:38:03 Asia/Jakarta] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/deploy/laporan/cert/cert.php on line 171
+[18-Feb-2021 13:38:03 Asia/Jakarta] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/deploy/laporan/cert/cert.php on line 171
+[18-Feb-2021 13:38:03 Asia/Jakarta] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/deploy/laporan/cert/cert.php on line 172
+[18-Feb-2021 13:38:03 Asia/Jakarta] PHP Deprecated:  mysql_query(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/siapdev/public_html/deploy/laporan/cert/cert.php on line 215
+[18-Feb-2021 13:38:03 Asia/Jakarta] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/siapdev/public_html/deploy/laporan/cert/cert.php on line 215
+[18-Feb-2021 13:38:03 Asia/Jakarta] PHP Warning:  mysql_query(): A link to the server could not be established in /home/siapdev/public_html/deploy/laporan/cert/cert.php on line 215
+[18-Feb-2021 13:38:03 Asia/Jakarta] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/siapdev/public_html/deploy/laporan/cert/cert.php on line 216
+[18-Feb-2021 13:38:04 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/siapdev/public_html/deploy/laporan/cert/f_cert.php:15) in /home/siapdev/public_html/deploy/laporan/cert/f_cert.php on line 16

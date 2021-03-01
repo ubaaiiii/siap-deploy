@@ -1,0 +1,12 @@
+[2021-02-08 11:42:44] ---- Error Insert tr_sppa_revisi
+	INSERT INTO tr_sppa_paid(paidid, regid, paiddt, paidamt, createdt, createby,paidtype) SELECT '252102530781', a.regid, '2021-02-03', '176.580.472', '2021-02-08 11:42:44', 'AMPM3178', 'CLAIM' FROM tr_sppa a INNER JOIN tr_claim b ON b.regid = a.regid WHERE a.regid='212004063608'
+[2021-02-08 11:45:07] ---- Error Insert tr_sppa_revisi
+	INSERT INTO tr_sppa_paid(paidid, regid, paiddt, paidamt, createdt, createby,paidtype) SELECT '252102530782', a.regid, '2021-02-03', '176.580.472', '2021-02-08 11:45:07', 'AMPM3178', 'CLAIM' FROM tr_sppa a INNER JOIN tr_claim b ON b.regid = a.regid WHERE a.regid='212004063608'
+[2021-02-08 11:46:28] ---- Error Insert tr_sppa_revisi
+	INSERT INTO tr_sppa_paid(paidid, regid, paiddt, paidamt, createdt, createby,paidtype) SELECT '252102530783', a.regid, '2021-02-03', '176.580.472', '2021-02-08 11:46:28', 'AMPM3178', 'CLAIM' FROM tr_sppa a INNER JOIN tr_claim b ON b.regid = a.regid WHERE a.regid='212004063608'
+[2021-02-09 08:55:28] ---- Error Insert tr_sppa_revisi
+	INSERT INTO tr_sppa_paid(paidid, regid, paiddt, paidamt, createdt, createby,paidtype) SELECT '252102530784', a.regid, '2021-02-03', '176.580.472', '2021-02-09 08:55:28', 'AMPM3178', 'CLAIM' FROM tr_sppa a INNER JOIN tr_claim b ON b.regid = a.regid WHERE a.regid='212004063608'
+[2021-02-09 09:12:21] ---- Error Insert tr_sppa_revisi
+	INSERT INTO tr_sppa_paid(paidid, regid, paiddt, paidamt, createdt, createby,paidtype) SELECT '252102530785', a.regid, '2021-02-03', '176.580.472', '2021-02-09 09:12:21', 'AMPM3178', 'CLAIM' FROM tr_sppa a INNER JOIN tr_claim b ON b.regid = a.regid WHERE a.regid='212004063608'
+[2021-02-09 09:13:47] ---- Error Insert tr_sppa_revisi
+	INSERT INTO tr_sppa_paid(paidid, regid, paiddt, paidamt, createdt, createby,paidtype) SELECT '252102530786', a.regid, '2021-02-03', '176.580.472', '2021-02-09 09:13:47', 'AMPM3178', 'CLAIM' FROM tr_sppa a INNER JOIN tr_claim b ON b.regid = a.regid WHERE a.regid='212004063608'

@@ -1,0 +1,1 @@
+UPDATE tbl_admin SET password=md5('NURMAN7410') WHERE username='NURMAN7410'

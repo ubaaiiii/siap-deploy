@@ -1,0 +1,1 @@
+UPDATE tr_sppa SET status='3' validby='demo',validdt='2018-10-29 09:22:37' WHERE regid='211810000049'
